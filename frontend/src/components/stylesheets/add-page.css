@@ -1,0 +1,970 @@
+.add-page {
+    padding: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin-bottom: 40px;
+}
+
+
+.add-page #edit-button {
+    border: 1px solid #a6a6a6;
+    border-radius: 5px;
+    padding: 2px 8px;
+}
+
+.mental {
+    padding: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    background-color: lightblue;
+    background-image: url("/clouds.jpg");
+    background-size: cover;
+    border-radius: 7px;
+    margin-bottom: 20px;
+}
+
+.mental-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#mental-form-title {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;   
+    font-style: italic; 
+    margin-bottom: 10px;
+}
+
+.mental h4 {
+    color: rgb(21, 21, 107);
+    font-style: italic;
+    margin-top: 5px;
+}
+
+#mental-qs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#mental-qs h3 {
+    margin-top: 20px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+#mental-qs select {
+    width: 253px;
+    text-align-last: center;
+    border-radius: 5px;
+}
+
+#mental-qs #notes {
+    margin-top: 10px;
+    height: 60px;
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #a6a6a6;
+}
+
+#submit-section {
+    margin-top: 10px;
+}
+
+#submit-section span {
+    margin-right: 7px;
+    color: rgb(21, 21, 107);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.mental #submit-button {
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #a6a6a6;
+}
+
+.mental #submit-button:hover {
+    color: blue;
+    border: 1px solid blue;
+    border-radius: 5px;
+}
+
+.challenges {
+    background-image: url("/prism.jpg");
+    background-size: cover;
+    border-radius: 7px;
+    padding: 40px;
+}
+
+.challenges h3 {
+    color: white;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.challenges #plus-square {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.challenges .fa-plus-square {
+    font-size: 16px;
+}
+
+.challenges .fa-plus-square:hover {
+    color: blue;
+}
+
+.challenges #plus-square span {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    color: white;
+}
+
+.challenges #plus-square span:hover {
+    color: blue;
+    /* font-weight: bold; */
+    cursor: default;
+}
+
+.new-challenge {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: -20px;
+    margin-right: -20px;
+    color: rgb(21, 21, 107);
+    text-align: center;
+    font-weight: bold;
+}
+
+#add-page-challenge-form {
+    display: flex;
+    align-items: center;
+    border: 4px solid gold;
+    border-radius: 7px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 35px;
+    /* margin-bottom: 15px; */
+}
+
+#add-page-challenge-form #ready {
+    margin-left: -15px;
+}
+
+#add-page-challenge-form #make-private {
+    display: flex;
+}
+
+#add-page-challenge-form #make-private input {
+    margin-left: 15px;
+}
+
+.new-challenge div {
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 3px;
+}
+
+.new-challenge #truly {
+    color: white;
+    font-style: italic;
+    /* font-family: Brush Script Std; */
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.new-challenge #big-word {
+    color: lightskyblue;
+    font-style: italic;
+}
+
+.new-challenge #perhaps {
+    /* font-style: italic; */
+    margin-top: 10px;
+}
+
+.new-challenge #or {
+    /* font-style: italic; */
+    margin-top: 10px;
+}
+
+.new-challenge #and {
+    font-style: italic;
+}
+
+.new-challenge #paren {
+    margin-bottom: 10px;
+    color: rgb(20, 91, 135);
+}
+
+.new-challenge #see-results {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.new-challenge #comfortable {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.new-challenge #benefit {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.other-metrics {
+    margin-top: 20px;
+    background-image: url("/colors.jpg");
+    background-size: cover;
+    border-radius: 7px;
+    padding: 40px;
+    color: white;
+}
+
+.other-metrics h3 {
+    color: white;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.other-metrics p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form {
+    display: flex;
+    flex-direction: horizontal;
+    justify-content: space-between;
+    padding: 5px;
+    align-items: center;
+}
+
+.form select {
+    text-align-last: center;
+    margin-bottom: 5px;
+}
+
+.form span {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.form #unit {
+    margin-left: 20px;
+}
+
+.form #textbox {
+    width: 400px;
+    margin-left: 20px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    border: 1px solid rgb(97, 96, 96);
+}
+
+#submit {
+    margin-right: 20px;
+    margin-left: 10px;
+    padding: 2px 8px;
+    border-radius: 5px;
+    border: 1px solid #a6a6a6;
+
+}
+
+#submit:hover {
+    color: blue;
+    box-shadow: 2px solid blue;
+    border: 1px solid blue;
+}
+
+#ask-routes {
+    font-size: 14px;
+    padding: 10px;
+    text-align: center;
+    font-style: italic;
+    color: white;
+}
+
+.add-page .mental #ask-routes {
+    color: rgb(21, 21, 107);
+}
+
+.add-page .caffeine #ask-routes {
+    color: white;
+}
+
+.add-page #ask-routes button {
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.add-page #ask-routes button:hover {
+    border: 1px solid blue;
+    color: blue;
+}
+
+/* -------------------------------------------- */ 
+
+#add-edit-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+}
+#add-edit-inputs select {
+    border-radius: 5px;
+}
+
+#add-edit-inputs input {
+    border: 1px solid black;
+}
+
+#add-edit-inputs div:nth-child(1) {
+    margin-top: 4px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+#add-edit-inputs #unit {
+    margin-left: 20px;
+}
+
+#update {
+    margin-left: 20px;
+    font-weight: 600;
+    font-size: 12px;
+    /* width: 370px; */
+    /* background-color: red; */
+}
+
+#edit-button {
+    margin-right: 20px;
+    padding: 2px 8px;
+    background-color: white;
+}
+
+.add-page .alcohol-edit {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.add-page .alcohol-edit .form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: white;
+    border: 3px solid rgb(144, 245, 42);
+    padding: 12px;   
+}
+
+.alcohol-edit #add-edit-inputs {
+    margin-bottom: 10px;
+    color: rgb(144, 245, 42);
+}
+
+.alcohol-edit .form #edit-button:hover {
+    color: rgb(144, 245, 42);
+    border: 1px solid rgb(144, 245, 42);
+    border-radius: 5px;
+}
+
+.add-page .badfat-edit {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.add-page .badfat-edit .form {
+    border: 3px solid rgb(238, 192, 111);
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: white;
+}
+
+.badfat-edit #add-edit-inputs {
+    margin-bottom: 10px;
+    color: rgb(238, 192, 111);
+}
+
+.badfat-edit .form #edit-button:hover {
+    color: rgb(238, 192, 111);
+    border: 1px solid rgb(238, 192, 111);
+    border-radius: 5px;
+}
+
+.add-page .caffeine-edit {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.add-page .caffeine-edit .form {
+    border: 3px solid rgb(62, 39, 14);
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: white;
+}
+
+.caffeine-edit #add-edit-inputs {
+    margin-bottom: 10px;
+    color: rgb(62, 39, 14);
+}
+
+.caffeine-edit .form #edit-button:hover {
+    color: rgb(62, 39, 14);
+    border: 1px solid rgb(62, 39, 14);
+    border-radius: 5px;
+}
+
+.add-page .carb-edit {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.add-page .carb-edit .form {
+    border: 3px solid rgb(254, 207, 20);
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: white;
+}
+
+.carb-edit #add-edit-inputs {
+    margin-bottom: 10px;
+    color: rgb(254, 207, 20);
+}
+
+.carb-edit .form #edit-button:hover {
+    color: rgb(254, 207, 20);
+    border: 1px solid rgb(254, 207, 20);
+    border-radius: 5px;
+}
+
+.add-page .cigarette-edit {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.add-page .cigarette-edit .form {
+    border: 3px solid rgb(174, 204, 243);
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: white;
+}
+
+.cigarette-edit #add-edit-inputs {
+    margin-bottom: 10px;
+    color: rgb(174, 204, 243);
+}
+
+.cigarette-edit .form #edit-button:hover {
+    color: rgb(174, 204, 243);
+    border: 1px solid rgb(174, 204, 243);
+    border-radius: 5px;
+}
+
+.add-page .creative-edit {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.add-page .creative-edit .form {
+    border: 3px solid rgb(175, 33, 215);
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: white;
+}
+
+.creative-edit #add-edit-inputs {
+    margin-bottom: 10px;
+    color: rgb(175, 33, 215);
+}
+
+.creative-edit .form #edit-button:hover {
+    color: rgb(175, 33, 215);
+    border: 1px solid rgb(175, 33, 215);
+    border-radius: 5px;
+}
+
+.add-page .drug-edit {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.add-page .drug-edit .form {
+    border: 3px solid rgb(247, 64, 247);
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: white;
+}
+
+.drug-edit #add-edit-inputs {
+    margin-bottom: 10px;
+    color: rgb(247, 64, 247);
+}
+
+.drug-edit .form #edit-button:hover {
+    color: rgb(247, 64, 247);
+    border: 1px solid rgb(247, 64, 247);
+    border-radius: 5px;
+}
+
+
+.add-page .exercise-edit {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.add-page .exercise-edit .form {
+    border: 3px solid rgb(33, 193, 193);
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: white;
+}
+
+.exercise-edit #add-edit-inputs {
+    margin-bottom: 10px;
+    color: rgb(33, 193, 193);
+}
+
+.exercise-edit .form #edit-button:hover {
+    color: rgb(33, 193, 193);
+    border: 1px solid rgb(33, 193, 193);
+    border-radius: 5px;
+}
+
+.add-page .fasting-edit {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.add-page .fasting-edit .form {
+    border: 3px solid darkslateblue;
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: white;
+}
+
+.fasting-edit #add-edit-inputs {
+    margin-bottom: 10px;
+    color: darkslateblue;
+}
+
+.fasting-edit .form #edit-button:hover {
+    color: darkslateblue;
+    border: 1px solid darkslateblue;
+    border-radius: 5px;
+}
+
+.add-page .gooddeed-edit {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.add-page .gooddeed-edit .form {
+    border: 3px solid rgb(0, 179, 255);
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: white;
+}
+
+.gooddeed-edit #add-edit-inputs {
+    margin-bottom: 10px;
+    color: rgb(0, 179, 255);
+}
+
+.gooddeed-edit .form #edit-button:hover {
+    color: rgb(0, 179, 255);
+    border: 1px solid rgb(0, 179, 255);
+    border-radius: 5px;
+}
+
+.add-page .goodfat-edit {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.add-page .goodfat-edit .form {
+    border: 3px solid rgb(236, 71, 25);
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: white;
+}
+
+.goodfat-edit #add-edit-inputs {
+    margin-bottom: 10px;
+    color: rgb(236, 71, 25);
+}
+
+.goodfat-edit .form #edit-button:hover {
+    color: rgb(236, 71, 25);
+    border: 1px solid rgb(236, 71, 25);
+    border-radius: 5px;
+}
+
+.add-page .hydration-edit {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.add-page .hydration-edit .form {
+    border: 3px solid rgb(107, 248, 248);
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: white;
+}
+
+.hydration-edit #add-edit-inputs {
+    margin-bottom: 10px;
+    color: rgb(107, 248, 248);
+}
+
+.hydration-edit .form #edit-button:hover {
+    color: rgb(107, 248, 248);
+    border: 1px solid rgb(107, 248, 248);
+    border-radius: 5px;
+}
+
+.add-page .learning-edit {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.add-page .learning-edit .form {
+    border: 3px solid rgb(35, 221, 35);
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: white;
+}
+
+.learning-edit #add-edit-inputs {
+    margin-bottom: 10px;
+    color: rgb(35, 221, 35);
+}
+
+.learning-edit .form #edit-button:hover {
+    color: rgb(35, 221, 35);
+    border: 1px solid rgb(35, 221, 35);
+    border-radius: 5px;
+}
+
+.add-page .localbiz-edit {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.add-page .localbiz-edit .form {
+    border: 3px solid rgb(245, 101, 12);
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: white;
+}
+
+.localbiz-edit #add-edit-inputs {
+    margin-bottom: 10px;
+    color: rgb(245, 101, 12);
+}
+
+.localbiz-edit .form #edit-button:hover {
+    color: rgb(245, 101, 12);
+    border: 1px solid rgb(245, 101, 12);
+    border-radius: 5px;
+}
+
+.add-page .medication-edit {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.add-page .medication-edit .form {
+    border: 3px solid red;
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: white;
+}
+
+.medication-edit #add-edit-inputs {
+    margin-bottom: 10px;
+    color: red;
+}
+
+.medication-edit .form #edit-button:hover {
+    color: red;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+.add-page .mindful-edit {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.add-page .mindful-edit .form {
+    border: 3px solid rgb(109, 109, 210);
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: white;
+}
+
+.mindful-edit #add-edit-inputs {
+    margin-bottom: 10px;
+    color: rgb(109, 109, 210);
+}
+
+.mindful-edit .form #edit-button:hover {
+    color: rgb(109, 109, 210);
+    border: 1px solid rgb(109, 109, 210);
+    border-radius: 5px;
+}
+
+.add-page .oop-edit {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.add-page .oop-edit .form {
+    border: 3px solid rgb(254, 153, 2);
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: white;
+}
+
+.oop-edit #add-edit-inputs {
+    margin-bottom: 10px;
+    color: rgb(254, 153, 2);
+}
+
+.oop-edit .form #edit-button:hover {
+    color: rgb(254, 153, 2);
+    border: 1px solid rgb(254, 153, 2);
+    border-radius: 5px;
+}
+
+.add-page .protein-edit {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.add-page .protein-edit .form {
+    border: 3px solid rgb(250, 121, 121);
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: white;
+}
+
+.protein-edit #add-edit-inputs {
+    margin-bottom: 10px;
+    color: rgb(250, 121, 121);
+}
+
+.protein-edit .form #edit-button:hover {
+    color: rgb(250, 121, 121);
+    border: 1px solid rgb(250, 121, 121);
+    border-radius: 5px;
+}
+
+.add-page .sleep-edit {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.add-page .sleep-edit .form {
+    border: 3px solid rgb(31, 31, 119);
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: white;
+}
+
+.sleep-edit #add-edit-inputs {
+    margin-bottom: 10px;
+    color: rgb(31, 31, 119);
+}
+
+.sleep-edit .form #edit-button:hover {
+    color: rgb(31, 31, 119);
+    border: 1px solid rgb(31, 31, 119);
+    border-radius: 5px;
+}
+
+.add-page .sugar-edit {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.add-page .sugar-edit .form {
+    border: 3px solid rgb(252, 178, 191);
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: white;
+}
+
+.sugar-edit #add-edit-inputs {
+    margin-bottom: 10px;
+    color: rgb(252, 178, 191);
+}
+
+.sugar-edit .form #edit-button:hover {
+    color: rgb(252, 178, 191);
+    border: 1px solid rgb(252, 178, 191);
+    border-radius: 5px;
+}
+
+.add-page .vegetable-edit {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.add-page .vegetable-edit .form {
+    border: 3px solid rgb(69, 138, 9);
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: white;
+}
+
+.vegetable-edit #add-edit-inputs {
+    margin-bottom: 10px;
+    color: rgb(69, 138, 9);
+}
+
+.vegetable-edit .form #edit-button:hover {
+    color: rgb(69, 138, 9);
+    border: 1px solid rgb(69, 138, 9);
+    border-radius: 5px;
+}

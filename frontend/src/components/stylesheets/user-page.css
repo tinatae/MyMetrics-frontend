@@ -1,0 +1,42 @@
+.userpage {
+    background-color: skyblue;
+    background-image: url("/prism.jpg");
+    background-size: cover;
+    color: white;
+    border-radius: 7px;
+    margin-left: 80px;
+    margin-right: 80px;
+    padding-bottom: 50px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.userpage-graphs {
+    padding: 20px;
+    border-radius: 7px;
+    margin-top: 40px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.userpage button {
+    margin-top: 20px;
+    border-radius:5px;
+    border: 1px solid #616060;
+    padding: 2px 8px;
+
+}
+
+.userpage button:hover {
+    box-shadow: 0 0 10px white;
+}
+
+#graph-title {
+    font-size: 20px;
+    text-align: center;
+}
+
+#graph-start-date {
+    font-size: 18px;
+    text-align: center;
+}

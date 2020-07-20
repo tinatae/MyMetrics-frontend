@@ -1,0 +1,151 @@
+h1 {
+    padding: 10px;
+}
+
+.metrics-page {
+    background-image: url("/colors.jpg");
+    background-size: cover;
+    border-radius: 7px;
+    color: white;
+    padding: 20px;
+    margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.input-holder {
+    padding: 5px;
+    margin-left: 80px;
+    margin-right: 80px;
+    display: block;
+    color: white;
+}
+
+.input-holder #field-icon {
+    width: 210px;
+    text-align: center;
+    margin-left: -30px;
+}
+
+.input-holder #date-section {
+    width: 70px;
+    text-align: center;
+}
+
+.input-holder #input-text {
+    width: 350px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.input-holder #field-icon:hover {
+    border-radius: 7px;
+    color: darkblue;
+    cursor: pointer;
+}
+
+#input-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#input-holder-content {
+    padding: 7px;
+    border-radius: 7px;
+    border: 1px solid white;
+}
+
+#input-holder-content div {
+    padding: 10px 20px;
+}
+
+.select-holder {
+    padding: 5px;
+    margin-left: 80px;
+    margin-right: 80px;
+    display: block;
+    color: white;
+}
+
+.select-holder #field-icon {
+    width: 200px;
+    text-align: center;
+    margin-left: -30px;
+}
+
+.select-holder #date-section {
+    width: 70px;
+    text-align: center;
+}
+
+.select-holder #result {
+    width: 340px;
+    text-align: center;
+}
+
+.select-holder #field-icon:hover {
+    border-radius: 7px;
+    color: darkblue;  
+    cursor: pointer;
+}
+
+#select-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#select-holder-content {
+    padding: 5px;
+    border-radius: 7px;
+    border: 1px solid white;
+}
+
+#select-holder-content div {
+    padding: 10px 20px;
+}
+
+.caffeine #select-holder-content {
+    color: white;
+}
+
+.sleep #select-holder-content {
+    color: white;
+}
+
+#user-icon {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+#user-icon span {
+    width: 110px;
+    text-align: right;
+    /* background-color: green; */
+}
+
+
+#user-icon:hover {
+    color: darkblue;
+    cursor: pointer;
+}
+
+#user-icon .fa-user-circle {
+    margin-left: 10px;
+}
+
+#learning-index .input-holder #field-icon {
+    margin-left: -10px;
+}
+
+
+#sleep-index .select-holder #field-icon:hover {
+    color: rgb(144, 245, 42);
+    cursor: pointer;
+}
+
+#sleep-index .select-holder #user-icon:hover {
+    color: rgb(144, 245, 42);
+    cursor: pointer;
+}

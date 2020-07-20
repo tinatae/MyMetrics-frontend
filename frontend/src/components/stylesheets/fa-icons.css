@@ -1,0 +1,463 @@
+i.fas, i.far {
+    padding: 5px;
+    font-size: 14px;
+    color: white;
+}
+
+.session-form .fa-project-diagram {
+    color: darkblue;
+    font-size: 30px;
+    transform: rotateZ(-20deg);
+    text-shadow: 
+    0 0 2px white, 
+    1px 1px 2px white, 
+    1px 1px 2px white, 
+    -1px -1px 2px white,
+    -1px -1px 2px white;
+}
+
+#top-nav .fa-project-diagram {
+    color: blue;
+    font-size: 25px;
+    transform: rotateZ(-20deg);
+}
+
+#top-nav .fa-project-diagram:hover {
+    color: rgb(145, 239, 22);
+    /* color: rgb(197, 32, 175); */
+    /* text-shadow: 
+    0 0 5px rgb(145, 239, 22), 
+    1px 1px 5px rgb(145, 239, 22), 
+    1px 1px 5px rgb(145, 239, 22), 
+    -1px -1px 5px rgb(145, 239, 22),
+    -1px -1px 5px rgb(145, 239, 22); */
+}
+
+#top-nav .fa-chart-bar {
+    transform: scaleX(0.5); 
+}
+
+#top-nav #plink {
+    color: blue;
+    font-size: 28px;
+}
+
+#top-nav #plink:hover {
+    color: rgb(145, 239, 22);
+}
+
+.fa-caret-down {
+    color: darkblue;
+}
+
+.dropdown-content .fa-star {
+    font-size: 13px;
+}
+
+.dropdown-content .fa-heart {
+    font-size: 13px;
+}
+
+.dropdown-content .fa-brain {
+    font-size: 13px;
+}
+
+.dropdown-content .fa-store-alt {
+    font-size: 13px;
+}
+
+#mental-edits .fa-edit {
+    color: black;
+    font-size: 13px;
+}
+
+#mental-edits .fa-edit:hover {
+    color: blue;
+}
+
+#metric-edits .fa-edit {
+    font-size: 13px;
+}
+
+#metric-edits .fa-edit:hover {
+    color: blue;
+    text-shadow:
+        -1px -1px 0 white,
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white;
+}
+
+#metric-edits .fa-times-circle {
+    font-size: 13px;
+}
+
+#metric-edits .fa-times-circle:hover {
+    color: red;
+    text-shadow:
+        -1px -1px 0 white,
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white;
+}
+
+.fa-user-circle {
+    font-size: 28px;
+}
+
+#avatar .fa-user-circle {
+    color: lightskyblue;
+    font-size: 150px;
+}
+
+#badge-gallery-words .fa-edit {
+    font-size: 12px;
+    color: black;
+}
+
+#badge-gallery-words .fa-edit:hover {
+    color: blue;
+}
+
+.badge-holder .fa-certificate {
+    color: yellow;
+    font-size: 65px;
+    text-shadow:
+    -1px -1px 0 gold,
+    1px -1px 0 gold,
+    -1px 1px 0 gold,
+    2px 1px 0 gold;
+}
+
+.badge-holder .fa-ribbon {
+    color: red;
+    font-size: 65px;
+}
+
+.badge-holder .fa-passport {
+    color: blue;
+    font-size: 65px;
+}
+
+.badge-holder .fa-star {
+    color: gold;
+    font-size: 65px;
+    text-shadow:
+        -1px -1px 0 lightsteelblue,
+        1px -1px 0 lightsteelblue,
+        -1px 1px 0 lightsteelblue,
+        5px 1px 0 lightsteelblue;
+}
+
+.badge-holder .fa-trophy {
+    color: gold;
+    font-size: 50px;
+    text-shadow:
+    -1px -1px 0 yellow,
+    1px -1px 0 yellow,
+    -1px 1px 0 yellow,
+    2px 1px 0 yellow;
+}
+
+.badge-holder .fa-award {
+    color: red;
+    font-size: 50px;
+}
+
+.badge-holder .fa-medal {
+    color: lightskyblue;
+    font-size: 50px;
+    text-shadow:
+    -1px -1px 0 lightsteelblue,
+    1px -1px 0 lightsteelblue,
+    -1px 1px 0 lightsteelblue,
+    1px 1px 0 lightsteelblue;
+}
+
+.badge-holder .fa-eye {
+    font-size: 10px;
+    color: black;
+}
+
+.badge-holder .fa-eye-slash {
+    font-size: 10px;
+    color: black;
+}
+
+#bio-content .fa-ribbon {
+    color: red;
+    margin-right: 9px;
+}
+
+#bio-content .fa-globe-americas {
+    color: blue;
+    margin-right: 5px;
+}
+
+#bio-content .fa-passport {
+    color: lightskyblue;
+    margin-right: 9px;
+}
+
+#editable .fa-edit {
+    color: black;
+    font-size: 12px;
+}
+
+#editable .fa-edit:hover {
+    color: blue;
+}
+
+.profile-challenges .fa-edit {
+    color: black;
+    font-size: 12px;
+}
+
+#edit-challenge-holder .fa-times-circle {
+    color: red;
+    font-size: 12px;
+}
+
+#edit-challenge-holder .fa-times-circle:hover {
+    color: black;
+    font-size: 12px;
+}
+
+#metric-holder .fa-star {
+    font-size: 14px;
+    color: white;
+}
+
+#metric-holder .fa-heart {
+    font-size: 14px;
+    color: white;
+}
+
+#challenge-holder i.fas, i.far {
+    font-size: 20px;  
+}
+
+#mental-holder .fa-balance-scale {
+    color: black;
+}
+
+#mental-holder .fa-water {
+    color: black;
+}
+
+#mental-holder .fa-cloud {
+    color: lightskyblue;
+}
+
+#mental-holder .fa-times-circle {
+    color: black;
+    font-size: 12px;
+}
+
+#mental-holder .fa-times-circle:hover {
+    color: red;
+}
+
+#graph-title i.fas, i.far {
+    font-size: 18px;
+}
+
+#add-section .fa-plus-square {
+    color: rgb(21, 21, 107);
+    font-size: 15px;
+    cursor: default;
+}
+
+#alcohol-index #add-section:hover .fa-plus-square {
+    color: rgb(144, 245, 42);
+}
+
+#alcohol-index #title .fa-glass-martini-alt {
+    color: rgb(144, 245, 42);
+    font-size: 20px;
+}
+
+#badfat-index #add-section:hover .fa-plus-square {
+    color: rgb(238, 192, 111);
+}
+
+#badfat-index #title .fa-cloud-meatball {
+    color: rgb(238, 192, 111);
+    font-size: 20px;
+}
+
+#caffeine-index #add-section:hover .fa-plus-square {
+    color: rgb(62, 39, 14);
+}
+
+#caffeine-index #title .fa-coffee {
+    color: rgb(62, 39, 14);
+    font-size: 20px;
+}
+
+#carb-index #add-section:hover .fa-plus-square {
+    color: rgb(254, 207, 20);
+}
+
+#carb-index #title .fa-bread-slice {
+    color: rgb(254, 207, 20);
+    font-size: 20px;
+}
+
+#cigarette-index #add-section:hover .fa-plus-square {
+    color: rgb(174, 204, 243);
+}
+
+#cigarette-index #title .fa-smoking {
+    color: rgb(174, 204, 243);
+    font-size: 20px;
+}
+
+#creative-index #add-section:hover .fa-plus-square {
+    color: rgb(175, 33, 215);
+}
+
+#creative-index #title .fa-palette {
+    color: rgb(175, 33, 215);
+    font-size: 20px;
+}
+
+#drug-index #add-section:hover .fa-plus-square {
+    color: rgb(247, 64, 247);
+}
+
+#drug-index #title .fa-dice-d20 {
+    color: rgb(247, 64, 247);
+    font-size: 20px;
+}
+
+#exercise-index #add-section:hover .fa-plus-square {
+    color: rgb(33, 193, 193);
+}
+
+#exercise-index #title .fa-heartbeat {
+    color: rgb(33, 193, 193);
+    font-size: 20px;
+}
+
+#fasting-index #add-section:hover .fa-plus-square {
+    color: darkslateblue;
+}
+
+#fasting-index #title .fa-hourglass-half {
+    color: darkslateblue;
+    font-size: 20px;
+}
+
+#gooddeed-index #add-section:hover .fa-plus-square {
+    color: rgb(0, 179, 255);
+}
+
+#gooddeed-index #title .fa-star {
+    color: rgb(0, 179, 255);
+    font-size: 20px;
+}
+
+#goodfat-index #add-section:hover .fa-plus-square {
+    color: rgb(236, 71, 25);
+}
+
+#goodfat-index #title .fa-heart {
+    color: rgb(236, 71, 25);
+    font-size: 20px;
+}
+
+#hydration-index #add-section:hover .fa-plus-square {
+    color: rgb(107, 248, 248);
+}
+
+#hydration-index #title .fa-tint {
+    color: rgb(107, 248, 248);
+    font-size: 20px;
+}
+
+#learning-index #add-section:hover .fa-plus-square {
+    color: rgb(35, 221, 35);
+}
+
+#learning-index #title .fa-brain {
+    color: rgb(35, 221, 35);
+    font-size: 20px;
+}
+
+#localbiz-index #add-section:hover .fa-plus-square {
+    color: rgb(245, 101, 12);
+}
+
+#localbiz-index #title .fa-store-alt {
+    color: rgb(245, 101, 12);
+    font-size: 20px;
+}
+
+#medication-index #add-section:hover .fa-plus-square {
+    color: red;
+}
+
+#medication-index #title .fa-prescription {
+    color: red;
+    font-size: 20px;
+}
+
+#mindful-index #add-section:hover .fa-plus-square {
+    color: rgb(109, 109, 210);
+}
+
+#mindful-index #title .fa-stroopwafel {
+    color: rgb(109, 109, 210);
+    font-size: 20px;
+}
+
+#oop-index #add-section:hover .fa-plus-square {
+    color:rgb(254, 153, 2);
+}
+
+#oop-index #title .fa-ghost {
+    color:rgb(254, 153, 2);
+    font-size: 20px;
+}
+
+#protein-index #add-section:hover .fa-plus-square {
+    color:rgb(250, 121, 121);
+}
+
+#protein-index #title .fa-egg {
+    color:rgb(250, 121, 121);
+    font-size: 20px;
+}
+
+#sleep-index #add-section:hover .fa-plus-square {
+    color:rgb(31, 31, 119);
+}
+
+#sleep-index #title .fa-bed {
+    color:rgb(31, 31, 119);
+    font-size: 20px;
+}
+
+#sugar-index #add-section:hover .fa-plus-square {
+    color:rgb(252, 178, 191);
+}
+
+#sugar-index #title .fa-cookie-bite {
+    color:rgb(252, 178, 191);
+    font-size: 20px;
+}
+
+#vegetable-index #add-section:hover .fa-plus-square {
+    color:rgb(69, 138, 9);
+}
+
+#vegetable-index #title .fa-carrot {
+    color:rgb(69, 138, 9);
+    font-size: 20px;
+}
+
+.credits .fa-laugh-beam {
+    color: purple;
+    /* font-size: 15px; */
+}

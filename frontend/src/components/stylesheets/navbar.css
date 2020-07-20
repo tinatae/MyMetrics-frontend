@@ -1,0 +1,151 @@
+#top-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+/* #personal-links {
+    margin-right: 50px;
+} */
+
+#personal-links i {
+    padding: 10px;   
+}
+
+#personal-links #link {
+    color: blue;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-weight: bold;
+    color: blue;
+    /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+#top-nav div:nth-child(1) {
+    display: flex;
+    align-items: center;
+}
+
+#top-nav h1:hover span {
+    display: none;
+}
+
+#top-nav h1:hover:after {
+    content: "All Metrics";
+    color: white;
+}
+
+#top-nav h1:hover {
+    text-shadow: 
+    0 0 2px rgb(144, 245, 42), 
+    1px 1px 2px rgb(144, 245, 42), 
+    1px 1px 2px rgb(144, 245, 42), 
+    -1px -1px 2px rgb(144, 245, 42),
+    -1px -1px 2px rgb(144, 245, 42);
+}
+
+.nav + div {
+    padding: 20px;
+    color: white;
+}
+
+.nav a {
+    padding: 5px 10px;
+    border-radius: 7px;
+}
+
+.nav a:hover {
+   border: solid 1px darkblue;
+}
+
+.drop-label {
+    color: black;
+    cursor: pointer;
+}
+
+.drop-label:hover {
+    color: blue;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 230px;
+    border-radius: 4px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 7px;
+    font-size: 13px;
+    background-color: white;
+}
+
+.dropdown-content Link {
+    padding: 12px 16px;
+    display: block;
+}
+
+.dropdown-content div {
+    /* text-align: center; */
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.dropdown-content a:hover {
+    /* background-color: rgb(173, 237, 255); */
+    display: block;
+    border: 1px solid blue;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .drop-label {
+    border: 1px solid  blue;
+    border-radius: 7px;
+    padding: 5px 10px;
+}
+
+.greeting {
+    display: flex;
+    align-items: center;
+}
+
+.greeting div {
+    width: 150px;
+    text-align: center;
+}
+
+.greeting div:hover {
+    color: blue;
+    cursor: default;
+}
+.greeting div:hover:after {
+    content: "!";
+}
+
+#logout-button {
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid black;
+    padding: 4px;
+    margin-left: 20px;
+}
+
+#logout-button:hover {
+    background-color: red;
+    color: white;
+    border: 1px solid white;
+}
