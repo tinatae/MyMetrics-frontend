@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { fetchAllHydrations, fetchUserHydrations } from "../../../actions/hydration_actions";
 import SelectHolder from '../shared/select_holder';
 import { withRouter } from "react-router-dom";
-import HydrationsContainer from "./hydrations_container";
+import HydrationsContainer from "./hydrations_add_container";
 import HydrationsEditContainer from './hydrations_edit_container';
 import { FieldColors } from "../../fields/shared/style_refs";
 import "../../stylesheets/field-index.css";
@@ -42,11 +42,11 @@ class HydrationsIndex extends React.Component {
     window.location.reload();
   }
 
-  indexPage() {
+  indexPage(categoryName) {
     if (this.props.location.pathname === "/hydration") {
       return (
         <div id="top-container">
-          <div id="title">
+          <div id="title" style={{color: FieldColors[categoryName]}}>
             <i className="fas fa-tint"></i>
             &ensp;H Y D R A T I O N
           </div>
@@ -92,7 +92,7 @@ class HydrationsIndex extends React.Component {
     if (this.props.allHydrations !== undefined) {
       return (
         <div id="hydration-index">
-          <div>{this.indexPage()}</div>
+          <div>{this.indexPage("Hydration")}</div>
           {this.props.allHydrations.map(metric => (
             <SelectHolder
               key={metric._id}

@@ -47,37 +47,37 @@ class NavBar extends React.Component {
 
       return (
         <div className="nav">
-          <div><Link style={{ textDecoration: 'none', color: 'darkblue' }} to={"/"}><i className="far fa-chart-bar" style={{ color: 'darkblue', fontSize: '16px', transform: 'scale(0.9, 1.1)'}}></i>All Metrics</Link></div>
-          <div><Link style={{ textDecoration: 'none', color: 'darkblue' }} to={`/profile/${this.props.currentUser.id}`}><i className="fa fa-user-circle" style={{ color: 'darkblue', marginRight: '5px', fontSize: '16px'}}></i>My Profile</Link></div>
+          <div><Link to={"/"}><i className="far fa-chart-bar"></i>All&nbsp;Metrics</Link></div>
+          <div><Link to={`/profile/${this.props.currentUser.id}`}><i className="fa fa-user-circle"></i>My&nbsp;Profile</Link></div>
           <div className="dropdown">
-            <div className="drop-label" style={{color: 'darkblue'}}>Explore <i className="fa fa-caret-down"></i></div>
+            <div className="drop-label">Explore <i className="fa fa-caret-down"></i></div>
             <div className="dropdown-content">
-              <div><Link style={{ textDecoration: 'none', color: 'rgb(144, 245, 42)'}} to={"/alcohol"}>{AllColoredIcons["Alcohol"]} ALCOHOL</Link></div>
-              <div><Link style={{ textDecoration: 'none', color: 'rgb(238, 192, 111)' }} to={"/notsogreatfats"}>{AllColoredIcons["BadFat"]} NOT SO GREAT FATS</Link></div>
-              <div><Link style={{ textDecoration: 'none', color: 'rgb(62, 39, 14)' }} to={"/caffeine"}>{AllColoredIcons["Caffeine"]}CAFFEINE</Link></div>
-              <div><Link style={{ textDecoration: 'none', color: 'rgb(254, 207, 20)' }} to={"/carbs"}>{AllColoredIcons["Carb"]}CARBS</Link></div>
-              <div><Link style={{ textDecoration: 'none', color: 'rgb(174, 204, 243)' }} to={"/cigs"}>{AllColoredIcons["Cigarette"]}CIGARETTES</Link></div>
-              <div><Link style={{ textDecoration: 'none', color: 'rgb(175, 33, 215)' }} to={"/creativity"}>{AllColoredIcons["Creative"]} CREATIVITY</Link></div>
-              <div><Link style={{ textDecoration: 'none', color: 'rgb(247, 64, 247)' }} to={"/recdrugs"}>{AllColoredIcons["Drug"]} RECREATIONAL DRUGS</Link></div>
-              <div><Link style={{ textDecoration: 'none', color: 'rgb(33, 193, 193)' }} to={"/exercise"}>{AllColoredIcons["Exercise"]} EXERCISE</Link></div>
-              <div><Link style={{ textDecoration: 'none', color: 'darkslateblue' }} to={"/fasting"}> {AllColoredIcons["Fasting"]}  FASTING</Link></div>
-              <div><Link style={{ textDecoration: 'none', color: 'rgb(0, 179, 255)' }} to={"/gooddeeds"}>{AllColoredIcons["GoodDeed"]}GOOD DEEDS</Link></div>
-              <div><Link style={{ textDecoration: 'none', color: 'rgb(236, 71, 25)' }} to={"/goodfats"}>{AllColoredIcons["GoodFat"]}GOOD FATS</Link></div>
-              <div><Link style={{ textDecoration: 'none', color: 'rgb(107, 248, 248)' }} to={"/hydration"}>{AllColoredIcons["Hydration"]} HYDRATION</Link></div>
-              <div><Link style={{ textDecoration: 'none', color: 'rgb(35, 221, 35)' }} to={"/newthing"}>{AllColoredIcons["Learning"]}LEARNED SOMETHING NEW</Link></div>
-              <div><Link style={{ textDecoration: 'none', color: 'rgb(245, 101, 12)' }} to={"/localbiz"}>{AllColoredIcons["LocalBiz"]}LOCAL BUSINESS</Link></div>
-              <div><Link style={{ textDecoration: 'none', color: 'red' }} to={"/meds"}>{AllColoredIcons["Medication"]} MEDICATION</Link></div>
-              <div><Link style={{ textDecoration: 'none', color: 'rgb(109, 109, 210)' }} to={"/mindfulness"}>{AllColoredIcons["Mindful"]}MINDFULNESS</Link></div>
-              <div><Link style={{ textDecoration: 'none', color: 'rgb(254, 153, 2)' }} to={"/oops"}>{AllColoredIcons["Oop"]} OOPS</Link></div>
-              <div><Link style={{ textDecoration: 'none', color: 'rgb(250, 121, 121)' }} to={"/protein"}>{AllColoredIcons["Protein"]} PROTEIN</Link></div>
-              <div><Link style={{ textDecoration: 'none', color: 'rgb(31, 31, 119)' }} to={"/sleep"}>{AllColoredIcons["Sleep"]}SLEEP</Link></div>
-              <div><Link style={{ textDecoration: 'none', color: 'rgb(252, 178, 191)' }} to={"/sugar"}>{AllColoredIcons["Sugar"]} SUGARS</Link></div>
-              <div><Link style={{ textDecoration: 'none', color: 'rgb(69, 138, 9)' }} to={"/veggies"}>{AllColoredIcons["Vegetable"]} VEGETABLES</Link></div>
+              <div><Link style={{ color: 'rgb(144, 245, 42)'}} to={"/alcohol"}>{AllColoredIcons["Alcohol"]} <span>A L C O H O L</span></Link></div>
+              <div><Link style={{ color: 'rgb(238, 192, 111)' }} to={"/notsogreatfats"}>{AllColoredIcons["BadFat"]} <span>N O T<span id="mobile-no">&emsp;S O</span>&emsp;G R E A T&emsp;F A T S</span></Link></div>
+              <div><Link style={{ color: 'rgb(62, 39, 14)' }} to={"/caffeine"}>{AllColoredIcons["Caffeine"]} <span>C A F F E I N E</span></Link></div>
+              <div><Link style={{ color: 'rgb(254, 207, 20)' }} to={"/carbs"}>{AllColoredIcons["Carb"]} <span>C A R B S</span></Link></div>
+              <div><Link style={{ color: 'rgb(174, 204, 243)' }} to={"/cigs"}>{AllColoredIcons["Cigarette"]} <span>C I G A R E T T E S</span></Link></div>
+              <div><Link style={{ color: 'rgb(175, 33, 215)' }} to={"/creativity"}>{AllColoredIcons["Creative"]} <span>C R E A T I V I T Y</span></Link></div>
+              <div><Link style={{ color: 'rgb(247, 64, 247)' }} to={"/recdrugs"}>{AllColoredIcons["Drug"]} <span>R E C<span id="mobile-no">R E A T I O N A L</span>&emsp;D R U G S</span></Link></div>
+              <div><Link style={{ color: 'rgb(33, 193, 193)' }} to={"/exercise"}>{AllColoredIcons["Exercise"]} <span>E X E R C I S E</span></Link></div>
+              <div><Link style={{ color: 'darkslateblue' }} to={"/fasting"}> {AllColoredIcons["Fasting"]}  <span>F A S T I N G</span></Link></div>
+              <div><Link style={{ color: 'rgb(0, 179, 255)' }} to={"/gooddeeds"}>{AllColoredIcons["GoodDeed"]}<span>G O O D&emsp;D E E D S</span></Link></div>
+              <div><Link style={{ color: 'rgb(236, 71, 25)' }} to={"/goodfats"}>{AllColoredIcons["GoodFat"]}<span>G O O D&emsp;F A T S</span></Link></div>
+              <div><Link style={{ color: 'rgb(107, 248, 248)' }} to={"/hydration"}>{AllColoredIcons["Hydration"]} <span>H Y D R A T I O N</span></Link></div>
+              <div><Link style={{ color: 'rgb(35, 221, 35)' }} to={"/newthing"}>{AllColoredIcons["Learning"]}<span>L E A R N E D<span id="mobile-no">&emsp;S O M E T H I N G</span>&emsp;N E W</span></Link></div>
+              <div><Link style={{ color: 'rgb(245, 101, 12)' }} to={"/localbiz"}>{AllColoredIcons["LocalBiz"]}<span>L O C A L&emsp;B U S I N E S S</span></Link></div>
+              <div><Link style={{ color: 'red' }} to={"/meds"}>{AllColoredIcons["Medication"]} <span>M E D I C A T I O N</span></Link></div>
+              <div><Link style={{ color: 'rgb(109, 109, 210)' }} to={"/mindfulness"}>{AllColoredIcons["Mindful"]}<span>M I N D F U L N E S S</span></Link></div>
+              <div><Link style={{ color: 'rgb(254, 153, 2)' }} to={"/oops"}>{AllColoredIcons["Oop"]} <span>O O P S</span></Link></div>
+              <div><Link style={{ color: 'rgb(250, 121, 121)' }} to={"/protein"}>{AllColoredIcons["Protein"]} <span>P R O T E I N</span></Link></div>
+              <div><Link style={{ color: 'rgb(31, 31, 119)' }} to={"/sleep"}>{AllColoredIcons["Sleep"]} <span>S L E E P</span></Link></div>
+              <div><Link style={{ color: 'rgb(252, 178, 191)' }} to={"/sugar"}>{AllColoredIcons["Sugar"]} <span>S U G A R S</span></Link></div>
+              <div><Link style={{ color: 'rgb(69, 138, 9)' }} to={"/veggies"}>{AllColoredIcons["Vegetable"]} <span>V E G E T A B L E S</span></Link></div>
             </div>
           </div>
 
-          <div><Link style={{ textDecoration: 'none', color: 'rgb(144, 245, 42)' }} to={"/new_day"}><i className="fas fa-plus" style={{ color: 'rgb(144, 245, 42)', fontSize: '14px'}}></i>Add Your Metric</Link></div>
-          <div><Link style={{ textDecoration: 'none', color: 'darkblue' }} to={"/mymetrics"}><i className="fas fa-chart-pie" style={{color: 'darkblue', marginRight: '2px', fontSize: '15px'}}></i>My Metrics</Link></div>
+          <div><Link to={"/new_day"}><i className="fas fa-plus"></i>Add&nbsp;Your&nbsp;Metric</Link></div>
+          <div><Link to={"/mymetrics"}><i className="fas fa-chart-pie"></i>MyMetrics</Link></div>
           
           <div className="greeting">
             <div onClick={this.goToProfile()}>Hello, {this.props.currentUser.username[0].toUpperCase() + this.props.currentUser.username.slice(1).toLowerCase()}</div>

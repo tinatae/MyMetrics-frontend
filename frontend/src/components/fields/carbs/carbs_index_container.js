@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { fetchAllCarbs, fetchUserCarbs } from "../../../actions/carb_actions";
 import SelectHolder from '../shared/select_holder';
 import { withRouter } from "react-router-dom";
-import CarbsContainer from "./carbs_container";
+import CarbsContainer from "./carbs_add_container";
 import CarbsEditContainer from './carbs_edit_container';
 import { FieldColors } from "../../fields/shared/style_refs";
 import "../../stylesheets/field-index.css";
@@ -42,11 +42,11 @@ class CarbsIndex extends React.Component {
     window.location.reload();
   }
 
-  indexPage() {
+  indexPage(categoryName) {
     if (this.props.location.pathname === "/carbs") {
       return (
         <div id="top-container">
-          <div id="title">
+          <div id="title" style={{color: FieldColors[categoryName]}}>
             <i className="fas fa-bread-slice"></i>
             &ensp;C A R B S
           </div>
@@ -92,7 +92,7 @@ class CarbsIndex extends React.Component {
     if (this.props.allCarbs !== undefined) {
       return (
         <div id="carb-index">
-          <div>{this.indexPage()}</div>
+          <div>{this.indexPage("Carb")}</div>
           {this.props.allCarbs.map(metric => (
             <SelectHolder
               key={metric._id}

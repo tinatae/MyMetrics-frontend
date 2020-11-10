@@ -10,7 +10,6 @@ const UserPageMentalLineGraph = ({
 }) => {
 
     let balanceDataPts = [];
- 
 
     // console.log(metrics[metrics.length-1].date); RETURNS OLDEST DATE
     // console.log(metrics[0].date); // RETURNS MOST RECENT METRIC DATE
@@ -22,7 +21,6 @@ const UserPageMentalLineGraph = ({
             y: metrics[i].balance,
             mood: metrics[i].currentMood,
             notes: `<span style="font-style: italic; color: blue;">${metrics[i].notes}</span>`,
-            // dates: new Date(metrics[i].date).toLocaleDateString('en-US', { month: 'numeric', day: 'numeric' }),
             startDate: new Date(metrics[metrics.length-1].date).toLocaleDateString('en-US', { month: 'numeric', day: 'numeric' }),
             endDate: new Date(metrics[0].date).toLocaleDateString('en-US', { month: 'numeric', day: 'numeric' })
         })

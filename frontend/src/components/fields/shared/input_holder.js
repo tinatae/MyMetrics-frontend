@@ -26,10 +26,10 @@ const InputHolder = ({
         <div className="input-holder">
             <div style={{ background: `${color}` }} id="input-holder-content">
                 <div id="input-content"> 
-                    <div onClick={exploreCategory(category)} id="field-icon">{pic} {name}</div>
+                    <div onClick={exploreCategory(category)} id="field-icon">{pic}<span id="mobile-no"> {name}</span></div>
                     <div id="date-section">{new Date(date).toLocaleDateString('en-US', { weekday: 'short', month: 'numeric', day: 'numeric' }).split(',').join(' ')}</div>            
                     <div id="input-text">{amt}. {unit}</div>
-                    <div id="user-icon" onClick={handleClick(user)} ><span>{username}</span><i className="fa fa-user-circle"></i></div>
+                    <div id="user-icon" onClick={handleClick(user)} ><span>{username}</span><span id="mobile-no"><i className="fa fa-user-circle"></i></span></div>
                 </div>
 
                 

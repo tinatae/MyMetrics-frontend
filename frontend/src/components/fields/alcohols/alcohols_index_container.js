@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { withRouter } from 'react-router-dom';
 import { fetchAllAlcohols, fetchUserAlcohols } from "../../../actions/alcohol_actions";
 import SelectHolder from '../shared/select_holder';
-import AlcoholsContainer from './alcohols_container';
+import AlcoholsContainer from './alcohols_add_container';
 import AlcoholsEditContainer from './alcohols_edit_container';
 import { FieldColors } from "../../fields/shared/style_refs";
 import "../../stylesheets/field-index.css";
@@ -42,11 +42,11 @@ class AlcoholsIndex extends React.Component {
       window.location.reload();
     }
 
-    indexPage() {
+    indexPage(categoryName) {
         if (this.props.location.pathname === '/alcohol') {
             return (
               <div id="top-container">
-                <div id="title">
+                <div id="title" style={{color: FieldColors[categoryName]}}>
                   <i className="fas fa-glass-martini-alt"></i>
                   &ensp;A L C O H O L
                 </div>
@@ -95,7 +95,7 @@ class AlcoholsIndex extends React.Component {
             return (
                 <div id="alcohol-index">
                     
-                    <div>{this.indexPage()}</div>
+                    <div>{this.indexPage("Alcohol")}</div>
                     {this.props.allAlcohols.map(metric => (
                         <SelectHolder
                             key={metric._id}

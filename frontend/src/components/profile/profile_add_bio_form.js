@@ -94,9 +94,9 @@ class ProfileAddBioForm extends React.Component {
         <div>
           <div id="bio-q-title">Joined {new Date(this.props.user.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</div>
           <div id="bio-q-title">Edit Bio in the Box Below</div>
-          <input id="textbox" 
-          wrap="hard" rows="14" cols="10" length="100" 
-          type="text" value={this.state.bio} onChange={this.update('bio')} />
+          <textarea
+            value={this.state.bio} onChange={this.update('bio')}>
+          </textarea>
 
           <div id="bio-q-title"><i className="fa fa-ribbon"></i>Have you survived or do you currently live with a major illness?</div>
             <select name="survivor" value={this.state.survivor} onChange={this.update("survivor")} >

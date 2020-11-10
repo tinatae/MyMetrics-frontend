@@ -12,6 +12,17 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.metrics-page #date-section {
+    width: 70px;
+    text-align: center;
+}
+
+.metrics-page #field-icon:hover {
+    border-radius: 7px;
+    color: darkblue;
+    cursor: pointer;
+}
+
 .input-holder {
     padding: 5px;
     margin-left: 80px;
@@ -26,21 +37,10 @@ h1 {
     margin-left: -30px;
 }
 
-.input-holder #date-section {
-    width: 70px;
-    text-align: center;
-}
-
 .input-holder #input-text {
     width: 350px;
     text-align: center;
     font-size: 15px;
-}
-
-.input-holder #field-icon:hover {
-    border-radius: 7px;
-    color: darkblue;
-    cursor: pointer;
 }
 
 #input-content {
@@ -73,20 +73,9 @@ h1 {
     margin-left: -30px;
 }
 
-.select-holder #date-section {
-    width: 70px;
-    text-align: center;
-}
-
 .select-holder #result {
     width: 340px;
     text-align: center;
-}
-
-.select-holder #field-icon:hover {
-    border-radius: 7px;
-    color: darkblue;  
-    cursor: pointer;
 }
 
 #select-content {
@@ -119,7 +108,7 @@ h1 {
     margin-right: 20px;
 }
 
-#user-icon span {
+#user-icon span:first-child {
     width: 110px;
     text-align: right;
     /* background-color: green; */

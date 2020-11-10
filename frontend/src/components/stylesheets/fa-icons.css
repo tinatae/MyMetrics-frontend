@@ -24,13 +24,6 @@ i.fas, i.far {
 
 #top-nav .fa-project-diagram:hover {
     color: rgb(145, 239, 22);
-    /* color: rgb(197, 32, 175); */
-    /* text-shadow: 
-    0 0 5px rgb(145, 239, 22), 
-    1px 1px 5px rgb(145, 239, 22), 
-    1px 1px 5px rgb(145, 239, 22), 
-    -1px -1px 5px rgb(145, 239, 22),
-    -1px -1px 5px rgb(145, 239, 22); */
 }
 
 #top-nav .fa-chart-bar {
@@ -46,9 +39,6 @@ i.fas, i.far {
     color: rgb(145, 239, 22);
 }
 
-.fa-caret-down {
-    color: darkblue;
-}
 
 .dropdown-content .fa-star {
     font-size: 13px;
@@ -101,7 +91,11 @@ i.fas, i.far {
         1px 1px 0 white;
 }
 
-.fa-user-circle {
+.select-holder .fa-user-circle {
+    font-size: 28px;
+}
+
+.input-holder .fa-user-circle {
     font-size: 28px;
 }
 
@@ -460,4 +454,53 @@ i.fas, i.far {
 .credits .fa-laugh-beam {
     color: purple;
     /* font-size: 15px; */
+}
+
+/* DESKTOP ---------------------------------------------------------------------------------------------*/
+
+@media screen and (min-width: 800px) {
+    .nav .fa-chart-bar {
+        color: darkblue;
+        font-size: 16px;
+        transform: scale(0.9, 1.1);
+    }
+
+    .nav .fa-chart-bar:hover {
+        color: blue;
+    }
+
+    .nav .fa-user-circle {
+        color: darkblue;
+        margin-right: 5px;
+        font-size: 16px;
+    }
+
+    .nav .fa-user-circle:hover {
+        color: blue;
+    }
+
+    .fa-caret-down {
+        color: darkblue;
+    }
+
+    .nav .fa-plus {
+        color: darkblue;
+        font-size: 13px;
+    }
+
+    .nav .fa-plus:hover {
+        color:blue;
+    }
+
+    .nav .fa-chart-pie {
+        color: darkblue;
+        font-size: 15px;
+        margin-right: 2px;
+    }
+
+    .nav .fa-chart-pie:hover {
+        color:blue;
+    }
+
+
 }

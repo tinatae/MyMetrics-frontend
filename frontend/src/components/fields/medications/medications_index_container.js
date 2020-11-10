@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { fetchAllMedications, fetchUserMedications } from "../../../actions/medication_actions";
 import SelectHolder from '../shared/select_holder';
 import { withRouter } from "react-router-dom";
-import MedicationsContainer from "./medications_container";
+import MedicationsContainer from "./medications_add_container";
 import MedicationsEditContainer from './medications_edit_container';
 import { FieldColors } from "../../fields/shared/style_refs";
 import "../../stylesheets/field-index.css";
@@ -42,11 +42,11 @@ class MedicationsIndex extends React.Component {
     window.location.reload();
   }
 
-  indexPage() {
+  indexPage(categoryName) {
     if (this.props.location.pathname === "/meds") {
       return (
         <div id="top-container">
-          <div id="title">
+          <div id="title" style={{color: FieldColors[categoryName]}}>
             <i className="fas fa-prescription"></i>
             &ensp;M E D I C A T I O N
           </div>
@@ -95,7 +95,7 @@ class MedicationsIndex extends React.Component {
     if (this.props.allMedications !== undefined) {
       return (
         <div id="medication-index">
-          <div>{this.indexPage()}</div>
+          <div>{this.indexPage("Medication")}</div>
           {this.props.allMedications.map(metric => (
             <SelectHolder
               key={metric._id}

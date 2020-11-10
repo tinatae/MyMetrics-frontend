@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { fetchAllGoodFats, fetchUserGoodFats } from "../../../actions/goodfat_actions";
 import SelectHolder from '../shared/select_holder';
 import { withRouter } from "react-router-dom";
-import GoodFatsContainer from "./goodfats_container";
+import GoodFatsContainer from "./goodfats_add_container";
 import GoodFatsEditContainer from './goodfats_edit_container';
 import { FieldColors } from "../../fields/shared/style_refs";
 import "../../stylesheets/field-index.css";
@@ -41,11 +41,11 @@ class GoodFatsIndex extends React.Component {
     window.location.reload();
   }
 
-  indexPage() {
+  indexPage(categoryName) {
     if (this.props.location.pathname === "/goodfats") {
       return (
         <div id="top-container">
-          <div id="title">
+          <div id="title" style={{color: FieldColors[categoryName]}}>
             <i className="far fa-heart"></i>
             &ensp;G O O D&emsp;F A T S
           </div>
@@ -91,7 +91,7 @@ class GoodFatsIndex extends React.Component {
     if (this.props.allGoodFats !== undefined) {
       return (
         <div id="goodfat-index">
-          <div>{this.indexPage()}</div>
+          <div>{this.indexPage("GoodFat")}</div>
           {this.props.allGoodFats.map(metric => (
             <SelectHolder
               key={metric._id}

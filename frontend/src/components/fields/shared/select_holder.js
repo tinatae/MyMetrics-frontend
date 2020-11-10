@@ -39,10 +39,10 @@ const SelectHolder = ({ date, category, user, username, amt, unit }) => {
         <div className="select-holder">
             <div style={{ background: `${color}` }} id="select-holder-content">
                 <div id="select-content">
-                    <div onClick={exploreCategory(category)} id="field-icon">{pic} {name}</div>
+                    <div onClick={exploreCategory(category)} id="field-icon">{pic}<span id="mobile-no"> {name}</span></div>
                     <div id="date-section">{new Date(date).toLocaleDateString('en-US', { weekday: 'short', month: 'numeric', day: 'numeric'}).split(',').join(' ')}</div>     
                     <div id="result">{checkYN(amt)} {checkPlural(amt, unit)}</div>
-                    <div id="user-icon" onClick={handleClick(user)} ><span>{username}</span><i className="fa fa-user-circle"></i></div>
+                    <div id="user-icon" onClick={handleClick(user)} ><span>{username}</span><span id="mobile-no"><i className="fa fa-user-circle"></i></span></div>
                 </div>
            
                 

@@ -39,12 +39,16 @@ class ProfileBadgeHolder extends React.Component {
 
             return (
               <div id="badge-eyeballs">
-                    <button value="false" onClick={this.handleClick(field)}>
-                        <i style={this.handleFalseStyle(field)} className="fas fa-eye"></i>
+                    <button id="false-button" value="false" onClick={this.handleClick(field)}>
+                        <span>
+                            <i style={this.handleFalseStyle(field)} className="fas fa-eye"></i>
+                        </span>
                     </button>
 
-                    <button value="true" onClick={this.handleClick(field)}>
-                        <i style={this.handleTrueStyle(field)} className="fas fa-eye-slash"></i>
+                    <button id="true-button" value="true" onClick={this.handleClick(field)}>
+                        <span>                   
+                            <i style={this.handleTrueStyle(field)} className="fas fa-eye-slash"></i>
+                        </span>
                     </button>
               </div>
             );
@@ -55,7 +59,7 @@ class ProfileBadgeHolder extends React.Component {
         switch(field) {
             case "joinedMakePrivate":
                 if (this.state.joinedMakePrivate === false) 
-                    {return {color: 'blue'}} else {
+                    {return {color: 'blue'}} else { 
                         return {color: 'lightgrey'}}
             case "survivorMakePrivate":
                 if (this.state.survivorMakePrivate === false) 
@@ -216,9 +220,8 @@ class ProfileBadgeHolder extends React.Component {
                     <div>
                         <span>{this.makeEdits("countriesTravelledMakePrivate")}</span>
                         <i className="fa fa-passport"></i>
-                        <br /><span>Has&nbsp;visited&nbsp;{countryCount}&nbsp;{this.checkPlural(countryCount)}
+                        <br /><span>Visited&nbsp;{countryCount}&nbsp;{this.checkPlural(countryCount)}
                         <br />Last&nbsp;visited:&nbsp;{this.props.user.countriesTravelled[countryCount - 1]}
-                        {/* <br />Last&nbsp;visited:&nbsp;{this.props.user.countriesTravelled[this.props.user.countriesTravelled.length - 1]} */}
                         </span>
                     </div>
                 )
@@ -334,10 +337,10 @@ class ProfileBadgeHolder extends React.Component {
            return (      
                    <div className="badge-holder">
                        <div className="non-challenge-badges">
-                           <span>{this.joinedBadge()}</span>
-                           <span>{this.survivorBadge()}</span>
-                           <span>{this.travelBadge()}</span>
-                           <span>{this.goodDeedBadge()}</span>
+                           <span id="joined-badge">{this.joinedBadge()}</span>
+                           <span id="survivor-badge">{this.survivorBadge()}</span>
+                           <span id="travel-badge">{this.travelBadge()}</span>
+                           <span id="good-badge">{this.goodDeedBadge()}</span>
                        </div>
                        <div>{this.publicChallenges()}</div>
                    </div>
@@ -350,220 +353,3 @@ class ProfileBadgeHolder extends React.Component {
 
 
 export default ProfileBadgeHolder;
-
-    
-
-    // const handleClick = (field) => e => {
-
-    //     let updatedUser = {
-    //         _id: this.props.user._id,
-    //        
-    //         survivorMakePrivate: this.props.user.survivorMakePrivate,
-    //         countriesTravelled: this.props.user.countriesTravelled,
-    //         countriesTravelledMakePrivate: this.props.user.countriesTravelledMakePrivate,
-    //         joinedMakePrivate: this.props.user.joinedMakePrivate
-    //     };
-
-    //     this.props.editUser(updatedUser);
-    //     editUser(userId);
-    // };
-
-    // function makeEdits(currentUserId, userId) {
-    //     if (currentUserId === userId) {
-    //         return (
-    //             <div onClick={handleClick(field)} ><i className="far fa-edit"></i></div>
-    //         )
-    //     } else { return null }
-    // };
-
-
-//-----------------------------------------------
-
-// formType: "Edit Badge Gallery",
-
-
-
-// const ProfileBadgeHolder = ({ user, userId, currentUserId, userGoodDeeds, editUser }) => {
-
-//     const countryCount = user.countriesTravelled.length;
-
-//     function joinedBadge() {
-//         if (user.joinedMakePrivate !== true) {
-//             return (
-//                 <div>
-//                     <i className="fa fa-certificate"></i>
-//                     <br />Joined { new Date(user.date).toLocaleDateString('en-US', { month: 'numeric', day: 'numeric', year: '2-digit' }) }
-//                 </div>
-//             )
-//         } else { return null }
-//     };
-
-//     function survivorBadge() {
-//         if (user.survivor === true && user.survivorMakePrivate !== true) {
-//             return (
-//                 <div>
-//                     <i className="fa fa-ribbon"></i>
-//                     <br />Survivor
-//                 </div>
-//             )
-//         } else { return null }
-//     };
-
-//     function checkPlural(count) {
-//         if (count === 1) { return "Country" }
-//         else { return "Countries" }
-//     };
-
-//     function travelBadge() {
-//         if (user.countriesTravelledMakePrivate !== true) {
-//             return (
-//                 <div><i className="fa fa-passport"></i>
-//                     <br /><span>Has&nbsp;visited&nbsp;{countryCount}&nbsp;{checkPlural(countryCount)}
-//                         <br />Last&nbsp;visited:&nbsp;{user.countriesTravelled[user.countriesTravelled.length - 1]}</span>
-//                 </div>
-//             )
-//         } else { return null }
-//     };
-
-//     function goodDeedCount() {
-//         let count = 0;
-//         for (let i = userGoodDeeds.length - 1; i >= 0; i--) {
-//             if (userGoodDeeds[i].amt === "Yes") { count += 1 } else { count += 0 }
-//         }
-//         return count;
-//     };
-
-//     function goodDeedBadge() {
-//         if (user.goodDeedMakePrivate !== true) {
-//             return (
-//                 <div>
-//                     <i className="far fa-star"></i>
-//                     <br />Good&nbsp;Deed&nbsp;Count: <br />
-//                     { goodDeedCount() }&nbsp;to - date
-//                 </div>
-//             )
-//         } else { return null }
-//     };
-
-
-//     function checkPluralDay(count) {
-//         if (count === 1) {return "Day"}
-//         else { return "Days" }
-//     };
-
-//     function publicChallenges() {
-//         let challengeOne = [];
-//         let challengeTwo = [];
-//         let challengeThree = [];
-
-//         user.challenges.forEach(challenge => {
-//             if (challenge.makePrivate !== true && challengeOne.length === 0) {
-//                 challengeOne = [challenge.name, Math.floor((Date.now() - new Date(challenge.date).getTime()) / (24 * 60 * 60 * 1000))]
-//             } else {
-//                 if (challenge.makePrivate !== true && challengeTwo.length === 0) {
-//                     challengeTwo = [challenge.name, Math.floor((Date.now() - new Date(challenge.date).getTime()) / (24 * 60 * 60 * 1000))]
-//                 } else {
-//                     if (challenge.makePrivate !== true && challengeThree.length === 0) {
-//                         challengeThree = [challenge.name, Math.floor((Date.now() - new Date(challenge.date).getTime()) / (24 * 60 * 60 * 1000))]
-//                     }
-//                 }
-//             }
-//         })
-
-//         if (challengeThree.length !== 0) {
-//             return (
-//                 <div className="challenge-badges">
-
-//                     <div>
-//                         <i className="fa fa-trophy"></i>
-//                         <br/>{challengeOne[1]}&nbsp;{checkPluralDay(challengeOne[1])}<br />
-//                         {FieldNames[challengeOne[0]]}<br/>Challenge
-//                     </div>
-
-//                     <div>
-//                         <i className="fa fa-award"></i>
-//                         <br/>{challengeTwo[1]}&nbsp;{checkPluralDay(challengeTwo[1])}<br />
-//                         {FieldNames[challengeTwo[0]]}<br/>Challenge
-//                     </div>
-
-//                     <div>
-//                         <i className="fa fa-medal"></i>
-//                         <br/>{challengeThree[1]}&nbsp;{checkPluralDay(challengeThree[1])}<br />
-//                         {FieldNames[challengeThree[0]]}<br/>Challenge
-//                     </div>
-//                 </div>
-//             )  
-//         } else { 
-//             if (challengeTwo.length !== 0) {
-//                 return (
-//                     <div className="challenge-badges">
-//                         <div>
-//                             <i className="fa fa-trophy"></i>
-//                             <br />{challengeOne[1]}&nbsp;{checkPluralDay(challengeOne[1])}<br />
-//                             {FieldNames[challengeOne[0]]}<br />Challenge
-//                         </div>
-
-//                         <div>
-//                             <i className="fa fa-award"></i>
-//                             <br />{challengeTwo[1]}&nbsp;{checkPluralDay(challengeTwo[1])}<br />
-//                             {FieldNames[challengeTwo[0]]}<br />Challenge
-//                         </div>
-//                     </div>
-//                 )
-//             } else {
-//                 if (challengeOne.length !== 0) {
-//                     return (
-//                         <div className="challenge-badges">
-//                             <div>
-//                                 <i className="fa fa-trophy"></i>
-//                                 <br />{challengeOne[1]}&nbsp;{checkPluralDay(challengeOne[1])}<br />
-//                                 {FieldNames[challengeOne[0]]}<br />Challenge
-//                             </div>
-//                         </div>
-//                     )
-//                 } else { return null }
-//             } 
-//         }
-//     };
-
-//     // const handleClick = (field) => e => {
-
-//     //     let updatedUser = {
-//     //         _id: this.props.user._id,
-//     //         bio: this.props.user.bio,
-//     //         survivor: this.props.user.survivor,
-//     //         survivorMakePrivate: this.props.user.survivorMakePrivate,
-//     //         countriesTravelled: this.props.user.countriesTravelled,
-//     //         countriesTravelledMakePrivate: this.props.user.countriesTravelledMakePrivate,
-//     //         joinedMakePrivate: this.props.user.joinedMakePrivate
-//     //     };
-
-//     //     this.props.editUser(updatedUser);
-//     //     editUser(userId);
-//     // };
-
-//     // function makeEdits(currentUserId, userId) {
-//     //     if (currentUserId === userId) {
-//     //         return (
-//     //             <div onClick={handleClick(field)} ><i className="far fa-edit"></i></div>
-//     //         )
-//     //     } else { return null }
-//     // };
-
-//     return (
-//         <div className="badge-holder">  
-//             {/* <div>{makeEdits()}</div> */}
-//             <div className="non-challenge-badges">
-//                 <span>{joinedBadge()}</span>
-//                 <span>{survivorBadge()}</span>      
-//                 <span>{travelBadge()}</span>
-//                 <span>{goodDeedBadge()}</span>
-//             </div>
-//             <div>{publicChallenges()}</div>
-//         </div>
-//     )
-// };
-
-// export default ProfileBadgeHolder;
-
-

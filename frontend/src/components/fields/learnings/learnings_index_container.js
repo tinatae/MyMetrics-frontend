@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { fetchAllLearnings, fetchUserLearnings } from "../../../actions/learning_actions";
 import InputHolder from '../shared/input_holder';
 import { withRouter } from "react-router-dom";
-import LearningsContainer from "./learnings_container";
+import LearningsContainer from "./learnings_add_container";
 import LearningsEditContainer from './learnings_edit_container';
 import { FieldColors } from "../../fields/shared/style_refs";
 import "../../stylesheets/field-index.css";
@@ -42,11 +42,11 @@ class LearningsIndex extends React.Component {
     window.location.reload();
   }
   
-  indexPage() {
+  indexPage(categoryName) {
     if (this.props.location.pathname === "/newthing") {
       return (
         <div id="top-container">
-          <div id="title">
+          <div id="title" style={{color: FieldColors[categoryName]}}>
             <i className="fas fa-brain"></i>
             &ensp;L E A R N E D&emsp;S O M E T H I N G&emsp;N E W
           </div>
@@ -92,7 +92,7 @@ class LearningsIndex extends React.Component {
     if (this.props.allLearnings !== undefined) {
       return (
         <div id="learning-index">
-          <div>{this.indexPage()}</div>
+          <div>{this.indexPage("Learning")}</div>
           {this.props.allLearnings.map(metric => (
             <InputHolder
               key={metric._id}

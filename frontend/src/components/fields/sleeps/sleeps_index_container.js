@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { fetchAllSleeps, fetchUserSleeps } from "../../../actions/sleep_actions";
 import SelectHolder from '../shared/select_holder';
 import { withRouter } from "react-router-dom";
-import SleepsContainer from "./sleeps_container";
+import SleepsContainer from "./sleeps_add_container";
 import SleepsEditContainer from './sleeps_edit_container';
 import { FieldColors } from "../../fields/shared/style_refs";
 import "../../stylesheets/field-index.css";
@@ -42,11 +42,11 @@ class SleepsIndex extends React.Component {
     window.location.reload();
   }
 
-  indexPage() {
+  indexPage(categoryName) {
     if (this.props.location.pathname === "/sleep") {
       return (
         <div id="top-container">
-          <div id="title">
+          <div id="title" style={{color: FieldColors[categoryName]}}>
             <i className="fas fa-bed"></i>
             &ensp;S L E E P
           </div>
@@ -92,7 +92,7 @@ class SleepsIndex extends React.Component {
     if (this.props.allSleeps !== undefined) {
       return (
         <div id="sleep-index">
-          <div>{this.indexPage()}</div>
+          <div>{this.indexPage("Sleep")}</div>
           {this.props.allSleeps.map(metric => (
             <SelectHolder
               key={metric._id}

@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { fetchAllGoodDeeds, fetchUserGoodDeeds } from "../../../actions/gooddeed_actions";
 import InputHolder from '../shared/input_holder';
 import { withRouter } from "react-router-dom";
-import GoodDeedsContainer from "./gooddeeds_container";
+import GoodDeedsContainer from "./gooddeeds_add_container";
 import GoodDeedsEditContainer from './gooddeeds_edit_container';
 import { FieldColors } from "../../fields/shared/style_refs";
 import "../../stylesheets/field-index.css";
@@ -42,11 +42,11 @@ class GoodDeedsIndex extends React.Component {
     window.location.reload();
   }
 
-  indexPage() {
+  indexPage(categoryName) {
     if (this.props.location.pathname === "/gooddeeds") {
       return (
         <div id="top-container">
-          <div id="title">
+          <div id="title" style={{color: FieldColors[categoryName]}}>
             <i className="far fa-star"></i>
             &ensp;G O O D&emsp;D E E D S
           </div>
@@ -92,7 +92,7 @@ class GoodDeedsIndex extends React.Component {
     if (this.props.allGoodDeeds !== undefined) {
       return (
         <div id="gooddeed-index">
-          <div>{this.indexPage()}</div>
+          <div>{this.indexPage("GoodDeed")}</div>
           {this.props.allGoodDeeds.map(metric => (
             <InputHolder
               key={metric._id}

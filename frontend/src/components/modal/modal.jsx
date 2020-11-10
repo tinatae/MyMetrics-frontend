@@ -33,5 +33,3 @@ const mDTP = dispatch => {
 };
 
 export default connect(mSTP, mDTP)(Modal);
-
-// <img src="/oculus.jpg" />

@@ -1,8 +1,8 @@
 #top-container {
-    display: block;
-    margin-left: 105px;
-    margin-right: 105px;
+    display: flex;
     border-radius: 7px;
+    flex-direction: column;
+    align-items: center;
 }
 
 #sub-header {
@@ -20,84 +20,21 @@
 }
 
 #units {
-  margin-left: 33%;
   font-weight: 600;
+  display: inline-flex;
+  flex-direction: column;
+  list-style-type: none;
+  border: 1px solid darkblue;
+  padding: 2px;
+  border-radius: 6px;
+}
+
+#units li {
+    padding: 3px 10px;
 }
 
 #units i.fas i.far {
     margin-right: 20px;
-}
-
-#badfat-index #units {
-    margin-left: 34%;
-}
-
-#caffeine-index #units {
-    margin-left: 35%;
-}
-
-#carb-index #units {
-    margin-left: 35%;
-}
-
-#cigarette-index #units {
-    margin-left: 34%;
-}
-
-#creative-index #units {
-    margin-left: 39%;
-}
-
-#drug-index #units {
-    margin-left: 29%;
-}
-
-#exercise-index #units {
-    margin-left: 30%;
-}
-
-#fasting-index #units {
-    margin-left: 35%;
-}
-
-#gooddeed-index #units {
-    margin-left: 39%;
-}
-
-#goodfat-index #units {
-    margin-left: 34%;
-}
-
-#hydration-index #units {
-    margin-left: 35%;
-}
-
-#learning-index #units {
-    margin-left: 39%;
-}
-
-#localbiz-index #units {
-    margin-left: 39%;
-}
-
-#medication-index #units {
-    margin-left: 25%;
-}
-
-#mindful-index #units {
-    margin-left: 39%;
-}
-
-#oop-index #units {
-    margin-left: 39%;
-}
-
-#sleep-index #units {
-    margin-left: 35%;
-}
-
-#sugar-index #units {
-    margin-left: 34%;
 }
 
 #add-section #add-words {
@@ -115,7 +52,6 @@
     margin-bottom: 10px;
     font-family: Arial, Helvetica, sans-serif;
 }
-
 
 #nested-form-button {
     margin-top: 10px;
@@ -178,53 +114,26 @@
     margin-top: 10px;
     border: 1px solid black;
     border-radius: 5px;
+    margin-left: 10px;
 }
 
-#alcohol-index #title {
+#top-container #title {
     text-align: center;
-    color: rgb(144, 245, 42);
     font-size: 20px;
     font-weight: 600;  
 }
 
-#add-section #nested-form .alcohol-edit {
-    margin-bottom: 10px;
-}
-
-#add-section #nested-form .alcohol-edit h5 {
+#add-section #nested-form h5 {
     margin-bottom: 15px;
     margin-top: 0px;
 }
 
-#add-section #nested-form .alcohol-edit #edit-button:hover {
+#add-section .alcohol-edit #edit-button:hover {
     border: 1px solid rgb(144, 245, 42);
 }
 
-#badfat-index #title {
-    text-align: center;
-    color: rgb(238, 192, 111);
-    font-size: 20px;
-    font-weight: 600;
-}
-
-#add-section #nested-form .badfat-edit {
-    margin-bottom: 10px;
-}
-
-#add-section #nested-form .badfat-edit h5 {
-    margin-bottom: 15px;
-    margin-top: 0px;
-}
-
-#add-section #nested-form .badfat-edit #edit-button:hover {
+#add-section .badfat-edit #edit-button:hover {
     border: 1px solid rgb(238, 192, 111);
-}
-
-#caffeine-index #title {
-    text-align: center;
-    color: rgb(62, 39, 14);
-    font-size: 20px;
-    font-weight: 600;
 }
 
 #add-section .caffeine span {
@@ -236,135 +145,42 @@
     color: white;
 }
 
-#add-section #nested-form .caffeine-edit {
-    margin-bottom: 10px;
-}
-
-#add-section #nested-form .caffeine-edit h5 {
-    margin-bottom: 15px;
-    margin-top: 0px;
-}
-
-#add-section #nested-form .caffeine-edit #edit-button:hover {
+#add-section .caffeine-edit #edit-button:hover {
     border: 1px solid rgb(62, 39, 14);
 }
 
-#carb-index #title {
-    text-align: center;
-    color: rgb(254, 207, 20);
-    font-size: 20px;
-    font-weight: 600;
-}
-
-#add-section #nested-form .carb-edit {
-    margin-bottom: 10px;
-}
-
-#add-section #nested-form .carb-edit h5 {
-    margin-bottom: 15px;
-    margin-top: 0px;
-}
-
-#add-section #nested-form .carb-edit #edit-button:hover {
+#add-section .carb-edit #edit-button:hover {
     border: 1px solid rgb(254, 207, 20);
 }
 
-#cigarette-index #title {
-    text-align: center;
-    color: rgb(174, 204, 243);
-    font-size: 20px;
-    font-weight: 600;
-}
-
-#add-section #nested-form .cigarette-edit {
-    margin-bottom: 10px;
-}
-
-#add-section #nested-form .cigarette-edit h5 {
-    margin-bottom: 15px;
-    margin-top: 0px;
-}
-
-#add-section #nested-form .cigarette-edit #edit-button:hover {
+#add-section .cigarette-edit #edit-button:hover {
     border: 1px solid rgb(174, 204, 243);
 }
 
-#creative-index #title {
-    text-align: center;
-    color: rgb(175, 33, 215);
-    font-size: 20px;
-    font-weight: 600;
-}
-
-
-#add-section #nested-form .creative #add-inputs #textbox {
+#add-section .creative #add-inputs #textbox {
     width: 380px;
     border: 1px solid black;
 }
 
-#add-section #nested-form .creative-edit {
-    margin-bottom: 10px;
-}
 
-#add-section #nested-form .creative-edit h5 {
-    margin-bottom: 15px;
-    margin-top: 0px;
-}
-
-#add-section #nested-form .creative-edit #edit-button:hover {
+#add-section .creative-edit #edit-button:hover {
     border: 1px solid rgb(175, 33, 215);
 }
 
-#drug-index #title {
-    text-align: center;
-    color: rgb(247, 64, 247);
-    font-size: 20px;
-    font-weight: 600;
-}
 
-#add-section #nested-form .drug-edit {
-    margin-bottom: 10px;
-}
-
-#add-section #nested-form .drug-edit h5 {
-    margin-bottom: 15px;
-    margin-top: 0px;
-}
-
-#add-section #nested-form .drug-edit #edit-button:hover {
+#add-section .drug-edit #edit-button:hover {
     border: 1px solid rgb(247, 64, 247);
 }
 
-#exercise-index #title {
-    text-align: center;
-    color: rgb(33, 193, 193);
-    font-size: 20px;
-    font-weight: 600;
-}
 
 #add-section .exercise span {
     color: white;
     font-style: italic;
 }
 
-#add-section #nested-form .exercise-edit {
-    margin-bottom: 10px;
-}
 
-#add-section #nested-form .exercise-edit h5 {
-    margin-bottom: 15px;
-    margin-top: 0px;
-}
-
-#add-section #nested-form .exercise-edit #edit-button:hover {
+#add-section .exercise-edit #edit-button:hover {
     border: 1px solid rgb(33, 193, 193);
-}
-
-#fasting-index #title {
-    text-align: center;
-    color: darkslateblue;
-    font-size: 20px;
-    font-weight: 600;
 }
 
 #add-section .fasting span {
@@ -372,140 +188,43 @@
     font-style: italic;
 }
 
-#add-section #nested-form .fasting-edit {
-    margin-bottom: 10px;
-}
 
-#add-section #nested-form .fasting-edit h5 {
-    margin-bottom: 15px;
-    margin-top: 0px;
-}
-
-#add-section #nested-form .fasting-edit #edit-button:hover {
+#add-section .fasting-edit #edit-button:hover {
     border: 1px solid darkslateblue;
-}
-
-#gooddeed-index #title {
-    text-align: center;
-    color: rgb(0, 179, 255);
-    font-size: 20px;
-    font-weight: 600;
 }
 
 #add-section .gooddeed #add-inputs #textbox {
     width: 350px;
 }
 
-#add-section #nested-form .gooddeed-edit {
-    margin-bottom: 10px;
-}
-
-#add-section #nested-form .gooddeed-edit h5 {
-    margin-bottom: 15px;
-    margin-top: 0px;
-}
-
-#add-section #nested-form .gooddeed-edit #edit-button:hover {
+#add-section .gooddeed-edit #edit-button:hover {
     border: 1px solid rgb(0, 179, 255);
 }
 
-#goodfat-index #title {
-    text-align: center;
-    color: rgb(236, 71, 25);
-    font-size: 20px;
-    font-weight: 600;
-}
 
-#add-section #nested-form .goodfat-edit {
-    margin-bottom: 10px;
-}
-
-#add-section #nested-form .goodfat-edit h5 {
-    margin-bottom: 15px;
-    margin-top: 0px;
-}
-
-#add-section #nested-form .goodfat-edit #edit-button:hover {
+#add-section .goodfat-edit #edit-button:hover {
     border: 1px solid rgb(236, 71, 25);
 }
 
-#hydration-index #title {
-    text-align: center;
-    color: rgb(107, 248, 248);
-    font-size: 20px;
-    font-weight: 600;
-}
 
-#add-section #nested-form .hydration-edit {
-    margin-bottom: 10px;
-}
-
-#add-section #nested-form .hydration-edit h5 {
-    margin-bottom: 15px;
-    margin-top: 0px;
-}
-
-#add-section #nested-form .hydration-edit #edit-button:hover {
+#add-section .hydration-edit #edit-button:hover {
     border: 1px solid rgb(107, 248, 248);
-}
-
-#learning-index #title {
-    text-align: center;
-    color: rgb(35, 221, 35);
-    font-size: 20px;
-    font-weight: 600;
 }
 
 #add-section .learning #add-inputs #textbox {
     width: 370px;
 }
 
-#add-section #nested-form .learning-edit {
-    margin-bottom: 10px;
-}
-
-#add-section #nested-form .learning-edit h5 {
-    margin-bottom: 15px;
-    margin-top: 0px;
-}
-
-#add-section #nested-form #add-inputs #textbox {
-    width: 350px;
-}
-
-#add-section #nested-form .learning-edit #edit-button:hover {
+#add-section .learning-edit #edit-button:hover {
     border: 1px solid rgb(35, 221, 35);
-}
-
-#localbiz-index #title {
-    text-align: center;
-    color: rgb(245, 101, 12);
-    font-size: 20px;
-    font-weight: 600;
 }
 
 #add-section .localbiz #add-inputs #textbox {
     width: 350px;
 }
 
-#add-section #nested-form .localbiz-edit {
-    margin-bottom: 10px;
-}
-
-#add-section #nested-form .localbiz-edit h5 {
-    margin-bottom: 15px;
-    margin-top: 0px;
-}
-
-#add-section #nested-form .localbiz-edit #edit-button:hover {
+#add-section .localbiz-edit #edit-button:hover {
     border: 1px solid rgb(245, 101, 12);
-}
-
-#medication-index #title {
-    text-align: center;
-    color: red;
-    font-size: 20px;
-    font-weight: 600;
 }
 
 #add-section .medication span {
@@ -513,100 +232,27 @@
     font-style: italic;
 }
 
-#add-section #nested-form .medication-edit {
-    margin-bottom: 10px;
-}
-
-#add-section #nested-form .medication-edit h5 {
-    margin-bottom: 15px;
-    margin-top: 0px;
-}
-
-#add-section #nested-form .medication-edit #edit-button:hover {
+#add-section .medication-edit #edit-button:hover {
    border: 1px solid red;
 }
 
-#mindful-index #title {
-    text-align: center;
-    color: rgb(109, 109, 210);
-    font-size: 20px;
-    font-weight: 600;
-}
-
-#add-section #nested-form .mindful-edit {
-    margin-bottom: 10px;
-}
-
-#add-section #nested-form .mindful-edit h5 {
-    margin-bottom: 15px;
-    margin-top: 0px;
-}
-
-#add-section #nested-form .mindful-edit #edit-button:hover {
+#add-section .mindful-edit #edit-button:hover {
     border: 1px solid rgb(109, 109, 210);
 }
 
-#oop-index #title {
-    text-align: center;
-    color: rgb(254, 153, 2);
-    font-size: 20px;
-    font-weight: 600;
-}
-
-#add-section #nested-form .oop-edit {
-    margin-bottom: 10px;
-}
-
-#add-section #nested-form .oop-edit h5 {
-    margin-bottom: 15px;
-    margin-top: 0px;
-}
-
-#add-section #nested-form .oop-edit #edit-button:hover {
+#add-section .oop-edit #edit-button:hover {
    border: 1px solid rgb(254, 153, 2);
 }
 
-#protein-index #title {
-    text-align: center;
-    color: rgb(250, 121, 121);
-    font-size: 20px;
-    font-weight: 600;
-}
-
-#add-section #nested-form .protein-edit {
-    margin-bottom: 10px;
-}
-
-#add-section #nested-form .protein-edit h5 {
-    margin-bottom: 15px;
-    margin-top: 0px;
-}
-
-#add-section #nested-form .protein-edit #edit-button:hover {
+#add-section .protein-edit #edit-button:hover {
     border: 1px solid rgb(250, 121, 121);
-}
-
-#sleep-index #title {
-    text-align: center;
-    color: rgb(31, 31, 119);
-    font-size: 20px;
-    font-weight: 600;
 }
 
 #add-section .sleep span {
     color: white;
 }
 
-#add-section #nested-form .sleep-edit {
-    margin-bottom: 10px;
-}
-
-#add-section #nested-form .sleep-edit h5 {
-    margin-bottom: 15px;
-    margin-top: 0px;
-}
-
-#add-section #nested-form .sleep-edit #edit-button:hover {
+#add-section .sleep-edit #edit-button:hover {
     border: 1px solid rgb(31, 31, 119);
 }
 
@@ -614,45 +260,10 @@
     color: white;
 }
 
-#sugar-index #title {
-    text-align: center;
-    color: rgb(252, 178, 191);
-    font-size: 20px;
-    font-weight: 600;
-}
-
-#add-section #nested-form .sugar-edit {
-    margin-bottom: 10px;
-}
-
-#add-section #nested-form .sugar-edit h5 {
-    margin-bottom: 15px;
-    margin-top: 0px;
-}
-
-#add-section #nested-form .sugar-edit #edit-button:hover {
+#add-section .sugar-edit #edit-button:hover {
     border: 1px solid rgb(252, 178, 191);
 }
 
-#vegetable-index #title {
-    text-align: center;
-    color: rgb(69, 138, 9);
-    font-size: 20px;
-    font-weight: 600;
-}
-
-#add-section #nested-form .vegetable-edit {
-    margin-bottom: 10px;
-}
-
-#add-section #nested-form .vegetable-edit h5 {
-    margin-bottom: 15px;
-    margin-top: 0px;
-}
-
-#add-section #nested-form .vegetable-edit #edit-button:hover {
+#add-section .vegetable-edit #edit-button:hover {
     border: 1px solid rgb(69, 138, 9);
 }
-
-
-

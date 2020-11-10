@@ -18,33 +18,83 @@ class UserPage extends React.Component {
     this.showChallenges = this.showChallenges.bind(this);
     this.closeChallenges = this.closeChallenges.bind(this);
     this.backToTop = this.backToTop.bind(this);
+    this.callCategory = this.callCategory.bind(this);
   }
 
-  componentDidMount() { 
-    this.props.fetchSingleUser(this.props.currentUser.id);
-    this.props.fetchUserMentals(this.props.currentUser.id);
+  callCategory(name) {
+    switch (name) {
+        case "Alcohol":
+            this.props.fetchUserAlcohols(this.props.currentUser.id);
+            break;
+        case "BadFat":
+            this.props.fetchUserBadFats(this.props.currentUser.id);
+            break;
+        case "Caffeine":
+            this.props.fetchUserCaffeines(this.props.currentUser.id);
+            break;
+        case "Carb":
+            this.props.fetchUserCarbs(this.props.currentUser.id);
+            break;
+        case "Cigarette":
+            this.props.fetchUserCigarettes(this.props.currentUser.id);
+            break;
+        case "Creative":
+            this.props.fetchUserCreatives(this.props.currentUser.id);
+            break;
+        case "Drug":
+            this.props.fetchUserDrugs(this.props.currentUser.id);
+            break;
+        case "Exercise":
+            this.props.fetchUserExercises(this.props.currentUser.id);
+            break;
+        case "Fasting":
+            this.props.fetchUserFastings(this.props.currentUser.id);
+            break;
+        case "GoodDeed":
+            this.props.fetchUserGoodDeeds(this.props.currentUser.id);
+            break;
+        case "GoodFat":
+            this.props.fetchUserGoodFats(this.props.currentUser.id);
+            break;
+        case "Hydration":
+            this.props.fetchUserHydrations(this.props.currentUser.id);
+            break;
+        case "Learning":
+            this.props.fetchUserLearnings(this.props.currentUser.id);
+            break;
+        case "LocalBiz":
+            this.props.fetchUserLocalBizs(this.props.currentUser.id);
+            break;
+        case "Medication":
+            this.props.fetchUserMedications(this.props.currentUser.id);
+            break;
+        case "Mindful":
+            this.props.fetchUserMindfuls(this.props.currentUser.id);
+            break;
+        case "Oop":
+            this.props.fetchUserOops(this.props.currentUser.id);
+            break;
+        case "Protein":
+            this.props.fetchUserProteins(this.props.currentUser.id);
+            break;
+        case "Sleep":
+            this.props.fetchUserSleeps(this.props.currentUser.id);
+            break;
+        case "Sugar":
+            this.props.fetchUserSugars(this.props.currentUser.id);
+            break;
+        case "Vegetable":
+            this.props.fetchUserVegetables(this.props.currentUser.id);
+            break;
+        default:
+            return console.log("Sorry, category could not be found");
+    };
+  };
 
-    this.props.fetchUserAlcohols(this.props.currentUser.id);
-    this.props.fetchUserBadFats(this.props.currentUser.id);
-    this.props.fetchUserCaffeines(this.props.currentUser.id);
-    this.props.fetchUserCarbs(this.props.currentUser.id);
-    this.props.fetchUserCigarettes(this.props.currentUser.id);
-    this.props.fetchUserCreatives(this.props.currentUser.id);
-    this.props.fetchUserDrugs(this.props.currentUser.id);
-    this.props.fetchUserExercises(this.props.currentUser.id);
-    this.props.fetchUserFastings(this.props.currentUser.id);
-    this.props.fetchUserGoodDeeds(this.props.currentUser.id);
-    this.props.fetchUserGoodFats(this.props.currentUser.id);
-    this.props.fetchUserHydrations(this.props.currentUser.id);
-    this.props.fetchUserLearnings(this.props.currentUser.id);
-    this.props.fetchUserLocalBizs(this.props.currentUser.id);
-    this.props.fetchUserMedications(this.props.currentUser.id);
-    this.props.fetchUserMindfuls(this.props.currentUser.id);
-    this.props.fetchUserOops(this.props.currentUser.id);
-    this.props.fetchUserProteins(this.props.currentUser.id);
-    this.props.fetchUserSleeps(this.props.currentUser.id);
-    this.props.fetchUserSugars(this.props.currentUser.id);
-    this.props.fetchUserVegetables(this.props.currentUser.id);
+  componentDidMount() { 
+    this.props.fetchSingleUser(this.props.currentUser.id)
+    .then(() => this.props.user.challenges.map(challenge => (this.callCategory(challenge.name))));
+    this.props.fetchUserMentals(this.props.currentUser.id);
   }
 
   showMentals(e) {
@@ -97,7 +147,7 @@ class UserPage extends React.Component {
         "Vegetable": this.props.userVegetables,
       };
       
-      if (this.props.user !== undefined) {
+      if (this.props.user) {
         return (   
           <div className="userpage">
   

@@ -179,7 +179,7 @@ class Profile extends React.Component {
 
             <div>
               <h3>{capitalizedName}'s Current State {this.showMentalEditable(this.props.currentUser)}</h3>
-              {this.props.user.mentals.map(mental => (
+              {this.props.user.mentals.slice(-1).map(mental => (
                 <ProfileMentalHolderContainer
                   key={mental._id}
                   userId={this.props.user._id}
@@ -253,7 +253,8 @@ class Profile extends React.Component {
 
             <h3>{capitalizedName}'s Weekly Metrics</h3>
             <div id="metrics">
-              {this.props.user.metrics.map(metric => (
+              {this.props.user.metrics.slice(-10).map(metric => (
+              // {this.props.user.metrics.map(metric => (
                 <ProfileMetricHolderContainer
                   key={metric._id}
                   userId={this.props.user._id}
@@ -275,4 +276,3 @@ class Profile extends React.Component {
 };
 
 export default withRouter(Profile);
-

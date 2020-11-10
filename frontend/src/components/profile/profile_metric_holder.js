@@ -329,7 +329,7 @@ class ProfileMetricHolder extends React.Component {
                     <div id="metric-content">
                 
                         <div id="date">{new Date(this.props.date).toLocaleDateString('en-US', { weekday: 'short', month: 'numeric', day: 'numeric' }).split(',').join('.')}</div>
-                        <div id="logo" onClick={this.exploreCategory(route)}>{pic} {name}</div>
+                        <div id="logo" onClick={this.exploreCategory(route)}>{pic} <span id="mc-name">{name}</span></div>
                         <div id="info">{this.checkYN(this.props.amt)} {this.checkPlural(this.props.amt, this.props.unit)}</div>
 
                         <div>{this.makeEdits(this.props.currentUserId, this.props.userId)}</div>
@@ -474,7 +474,3 @@ export default withRouter(ProfileMetricHolder);
     // const oneDayForward = new Date(this.props.date).getTime() + (1 * 24 * 60 * 60 * 1000);
     // const oneDayBack = new Date(this.props.date).getTime() - (1 * 24 * 60 * 60 * 1000);
     // console.log(Date.now());
-
-
-
-

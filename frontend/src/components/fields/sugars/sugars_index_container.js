@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { fetchAllSugars, fetchUserSugars} from "../../../actions/sugar_actions";
 import SelectHolder from '../shared/select_holder';
 import { withRouter } from "react-router-dom";
-import SugarsContainer from "./sugars_container";
+import SugarsContainer from "./sugars_add_container";
 import SugarsEditContainer from './sugars_edit_container';
 import { FieldColors } from "../../fields/shared/style_refs";
 import "../../stylesheets/field-index.css";
@@ -42,11 +42,11 @@ class SugarsIndex extends React.Component {
     window.location.reload();
   }
 
-  indexPage() {
+  indexPage(categoryName) {
     if (this.props.location.pathname === "/sugar") {
       return (
         <div id="top-container">
-          <div id="title">
+          <div id="title" style={{color: FieldColors[categoryName]}}>
             <i className="fas fa-cookie-bite"></i>
             &ensp;S U G A R
           </div>
@@ -92,7 +92,7 @@ class SugarsIndex extends React.Component {
     if (this.props.allSugars !== undefined) {
       return (
         <div id="sugar-index">
-          <div>{this.indexPage()}</div>
+          <div>{this.indexPage("Sugar")}</div>
           {this.props.allSugars.map(metric => (
             <SelectHolder
               key={metric._id}

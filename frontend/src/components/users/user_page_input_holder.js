@@ -10,46 +10,25 @@ const UserPageInputHolder = ({ date, name, metrics }) => {
   const color = FieldColors[name];
   const icon = AllWhiteIcons[name];
 
-  const ynHash = {};
-
-  for (let i = 0; i < metrics.length; i++) {
-    if (!ynHash[metrics[i].amt]) ynHash[metrics[i].amt] = 0;
-    ynHash[metrics[i].amt] += 1;
-  }
-
-  const sumYNHashValues = ynHash["Yes"] && ynHash["No"] ? (ynHash["Yes"] + ynHash["No"]) : (ynHash["Yes"] ? (ynHash["Yes"]) : ynHash["No"]);
-
-  const ynDateHash = {};
-
-  for (let i = 0; i < metrics.length; i++) {
-    if (!ynDateHash[metrics[i].amt]) ynDateHash[metrics[i].amt] = [];
-    ynDateHash[metrics[i].amt].push(metrics[i].date);
-  }
-
-  const ynDateNoteHash = {};
-
-  for (let i = 0; i < metrics.length; i++) {
-    if (!ynDateNoteHash[metrics[i].amt]) {
-      ynDateNoteHash[metrics[i].amt] = [];
-      ynDateNoteHash[metrics[i].amt].push(
-        `<span style='font-style: italic; color: darkblue; font-weight: bold;'>${metrics[i].amt}</span>
-        <br/><span style='font-size: 13px;'>Notes on the Day:</span>
-        <br/><span style='font-size: 13px; font-weight: bold;'>${new Date(metrics[i].date).toLocaleDateString("en-US", { month: "numeric", day: "numeric" })}</span>: <span style='font-size: 13px; font-style: italic; color: blue;'>${metrics[i].unit}</span>`)
-    } else {
-      ynDateNoteHash[metrics[i].amt].push(`<br/><span style='font-size: 13px; font-weight: bold;'>${new Date(metrics[i].date).toLocaleDateString("en-US", { month: "numeric", day: "numeric" })}</span>: <span style='font-size: 13px; font-style: italic; color: blue;'>${metrics[i].unit}</span>`)
-    }
-  };
+  const ynHash = metrics.reduce(function(obj, metric) {
+    obj[metric.amt].count++;
+    obj[metric.amt].dates.push(metric.date);
+    obj[metric.amt].notes.push(`<br/><span style='font-size: 13px; font-weight: bold;'>${new Date(metric.date).toLocaleDateString("en-US", { month: "numeric", day: "numeric" })}</span>: <span style='font-size: 13px; font-style: italic; color: blue;'>${metric.unit}</span>`)
+    return obj
+  }, {"Yes": {count: 0, dates: [], notes: ["<span style='font-style: italic; color: darkblue; font-weight: bold;'>Yes</span><br/><span style='font-size: 13px;'>Notes on the Day:</span>"]}, "No": {count: 0, dates: [], notes: ["<span style='font-style: italic; color: darkblue; font-weight: bold;'>No</span><br/><span style='font-size: 13px;'>Notes on the Day:</span>"]}} )
 
   let dps = [];
+
+  let sumMetrics = ynHash["Yes"].count + ynHash["No"].count
 
   for (let i = 0; i < Object.keys(ynHash).length; i++) {
     dps.push({
       name: Object.keys(ynHash)[i],
-      y: Math.round((Object.values(ynHash)[i] / sumYNHashValues) * 100),
-      nameMetricCount: Object.values(ynHash)[i],
-      allMetricCount: sumYNHashValues,
-      dates: Object.values(ynDateHash)[i].map(date => " ".concat(new Date(date).toLocaleDateString("en-US", { month: "numeric", day: "numeric" }))),
-      notes: Object.values(ynDateNoteHash)[i]
+      y: Math.round((Object.values(ynHash)[i].count / sumMetrics) * 100),
+      nameMetricCount: Object.values(ynHash)[i].count,
+      allMetricCount: sumMetrics,
+      dates: Object.values(ynHash)[i].dates.map(date => " ".concat(new Date(date).toLocaleDateString("en-US", { month: "numeric", day: "numeric" }))),
+      notes: Object.values(ynHash)[i].notes
     });
   }
 

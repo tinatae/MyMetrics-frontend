@@ -83,4 +83,3 @@ class Challenge extends React.Component {
 }
 
 export default Challenge;
-

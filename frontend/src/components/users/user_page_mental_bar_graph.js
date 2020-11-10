@@ -12,32 +12,29 @@ const UserPageMentalBarGraph = ({
     //anxiety: Number
     //notes: String 
 
-    const metricHash = {};
-    let sumHashValues = 0;
+    var sumMoodCount = 0;
 
-    for (let i = (metrics.length - 1); i >= 0; i--) {
-        if (!metricHash[metrics[i].currentMood]) metricHash[metrics[i].currentMood] = 0;
-        metricHash[metrics[i].currentMood] += 1;
-        sumHashValues += 1;
-    }
+    const countAndDateHash = metrics.reduce(function(obj, metric) {
+      if (!obj[metric.currentMood]) {
+        obj[metric.currentMood] = {moodCount: 0, dates: []}
+      }
 
-    const dateHash = {};
+      obj[metric.currentMood].moodCount++;
+      obj[metric.currentMood].dates.push(metric.date)
+      sumMoodCount++;
+      return obj;
 
-    for (let i = (metrics.length - 1); i >= 0; i--) {
-        if (!dateHash[metrics[i].currentMood]) dateHash[metrics[i].currentMood] = [];
-        dateHash[metrics[i].currentMood].push(metrics[i].date);
-    };
+    }, {})
 
     let currentMoodDataPts = [];
 
-    for (let i = 0; i <= Object.keys(metricHash).length - 1; i++) {
+    for (let i = 0; i < sumMoodCount; i++) {
         currentMoodDataPts.push({
-            label: Object.keys(metricHash)[i],
-            // percent: Math.round(Object.values(metricHash)[i] / sumHashValues * 100),
-            y: Object.values(metricHash)[i],
-            dataY: `<span style='font-weight: bold; color: blue;'>${Object.values(metricHash)[i]}</span>`,
-            allMetricCount: `<span style='color: blue; font-weight: bold;'>${sumHashValues} reported metric(s)</span>`,
-            dates: Object.values(dateHash)[i].map(date => " ".concat(new Date(date).toLocaleDateString('en-US', { month: 'numeric', day: 'numeric' })))
+            label: Object.keys(countAndDateHash)[i],
+            y: Object.values(countAndDateHash)[i].moodCount,
+            dataY: `<span style='font-weight: bold; color: blue;'>${Object.values(countAndDateHash)[i].moodCount}</span>`,
+            allMetricCount: `<span style='color: blue; font-weight: bold;'>${sumMoodCount} reported metric(s)</span>`,
+            dates: Object.values(countAndDateHash)[i].dates.map(date => " ".concat(new Date(date).toLocaleDateString('en-US', { month: 'numeric', day: 'numeric' })))
         })
     };
 

@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { fetchAllProteins, fetchUserProteins } from "../../../actions/protein_actions";
 import SelectHolder from '../shared/select_holder';
 import { withRouter } from "react-router-dom";
-import ProteinsContainer from "./proteins_container";
+import ProteinsContainer from "./proteins_add_container";
 import ProteinsEditContainer from './proteins_edit_container';
 import { FieldColors } from "../../fields/shared/style_refs";
 import "../../stylesheets/field-index.css";
@@ -42,11 +42,11 @@ class ProteinsIndex extends React.Component {
     window.location.reload();
   }
 
-  indexPage() {
+  indexPage(categoryName) {
     if (this.props.location.pathname === "/protein") {
       return (
         <div id="top-container">
-          <div id="title">
+          <div id="title" style={{color: FieldColors[categoryName]}}>
             <i className="fas fa-egg"></i>
             &ensp;P R O T E I N
           </div>
@@ -94,7 +94,7 @@ class ProteinsIndex extends React.Component {
     if (this.props.allProteins !== undefined) {
       return (
         <div id="protein-index">
-          <div>{this.indexPage()}</div>
+          <div>{this.indexPage("Protein")}</div>
           {this.props.allProteins.map(metric => (
             <SelectHolder
               key={metric._id}

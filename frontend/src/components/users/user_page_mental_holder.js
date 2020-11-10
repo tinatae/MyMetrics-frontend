@@ -8,7 +8,7 @@ const UserPageMentalHolder = ({
 }) => {
 
     return (
-        <div>  
+        <div className="mental-graph-holder">  
             <UserPageMentalBarGraph metrics={metrics} />  
             <UserPageMentalPieGraph metrics={metrics} /> 
             <UserPageMentalLineGraph metrics={metrics} />         
@@ -17,4 +17,3 @@ const UserPageMentalHolder = ({
 };
 
 export default UserPageMentalHolder;
-

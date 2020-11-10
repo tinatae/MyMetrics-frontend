@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { fetchAllVegetables, fetchUserVegetables } from "../../../actions/vegetable_actions";
 import SelectHolder from '../shared/select_holder';
 import { withRouter } from "react-router-dom";
-import VegetablesContainer from "./vegetables_container";
+import VegetablesContainer from "./vegetables_add_container";
 import VegetablesEditContainer from './vegetables_edit_container';
 import { FieldColors } from "../../fields/shared/style_refs";
 import "../../stylesheets/field-index.css";
@@ -42,11 +42,11 @@ class VegetablesIndex extends React.Component {
     window.location.reload();
   }
 
-  indexPage() {
+  indexPage(categoryName) {
     if (this.props.location.pathname === "/veggies") {
       return (
         <div id="top-container">
-          <div id="title">
+          <div id="title" style={{color: FieldColors[categoryName]}}>
             <i className="fas fa-carrot"></i>
             &ensp;V E G G I E S
           </div>
@@ -92,7 +92,7 @@ class VegetablesIndex extends React.Component {
     if (this.props.allVegetables !== undefined) {
       return (
         <div id="vegetable-index">
-          <div>{this.indexPage()}</div>
+          <div>{this.indexPage("Vegetable")}</div>
           {this.props.allVegetables.map(metric => (
             <SelectHolder
               key={metric._id}

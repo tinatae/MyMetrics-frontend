@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { fetchAllBadFats, fetchUserBadFats } from "../../../actions/badfat_actions";
 import SelectHolder from '../shared/select_holder';
 import { withRouter } from "react-router-dom";
-import BadFatsContainer from "./badfats_container";
+import BadFatsContainer from "./badfats_add_container";
 import BadFatsEditContainer from './badfats_edit_container';
 import { FieldColors } from "../../fields/shared/style_refs";
 import "../../stylesheets/field-index.css";
@@ -42,11 +42,11 @@ class BadFatsIndex extends React.Component {
     window.location.reload();
   }
 
-  indexPage() {
+  indexPage(categoryName) {
     if (this.props.location.pathname === "/notsogreatfats") {
       return (
         <div id="top-container">
-          <div id="title">
+          <div id="title" style={{color: FieldColors[categoryName]}}>
             <i className="fas fa-cloud-meatball"></i>
             &ensp;N O T&emsp;S O&emsp;G R E A T&emsp;F A T S
           </div>
@@ -92,7 +92,7 @@ class BadFatsIndex extends React.Component {
     if (this.props.allBadFats !== undefined) {
       return (
         <div id="badfat-index">
-          <div>{this.indexPage()}</div>
+          <div>{this.indexPage("BadFat")}</div>
           {this.props.allBadFats.map(metric => (
             <SelectHolder
               key={metric._id}

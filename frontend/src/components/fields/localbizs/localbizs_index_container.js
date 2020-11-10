@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { fetchAllLocalBizs, fetchUserLocalBizs } from "../../../actions/localbiz_actions";
 import InputHolder from '../shared/input_holder';
 import { withRouter } from "react-router-dom";
-import LocalBizsContainer from "./localbizs_container";
+import LocalBizsContainer from "./localbizs_add_container";
 import LocalBizsEditContainer from './localbizs_edit_container';
 import { FieldColors } from "../../fields/shared/style_refs";
 import "../../stylesheets/field-index.css";
@@ -42,11 +42,11 @@ class LocalBizsIndex extends React.Component {
     window.location.reload();
   }
 
-  indexPage() {
+  indexPage(categoryName) {
     if (this.props.location.pathname === "/localbiz") {
       return (
         <div id="top-container">
-          <div id="title">
+          <div id="title" style={{color: FieldColors[categoryName]}}>
             <i className="fas fa-store-alt"></i>
             &ensp;L O C A L&emsp;B U S I N E S S
           </div>
@@ -92,7 +92,7 @@ class LocalBizsIndex extends React.Component {
     if (this.props.allLocalBizs !== undefined) {
       return (
         <div id="localbiz-index">
-          <div>{this.indexPage()}</div>
+          <div>{this.indexPage("LocalBiz")}</div>
           {this.props.allLocalBizs.map(metric => (
             <InputHolder
               key={metric._id}

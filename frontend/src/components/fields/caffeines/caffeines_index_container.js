@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { fetchAllCaffeines, fetchUserCaffeines } from "../../../actions/caffeine_actions";
 import SelectHolder from '../shared/select_holder';
 import { withRouter } from "react-router-dom";
-import CaffeinesContainer from "./caffeines_container";
+import CaffeinesContainer from "./caffeines_add_container";
 import CaffeinesEditContainer from './caffeines_edit_container';
 import { FieldColors } from "../../fields/shared/style_refs";
 import "../../stylesheets/field-index.css";
@@ -42,11 +42,11 @@ class CaffeinesIndex extends React.Component {
     window.location.reload();
   }
 
-  indexPage() {
+  indexPage(categoryName) {
     if (this.props.location.pathname === "/caffeine") {
       return (
         <div id="top-container">
-          <div id="title">
+          <div id="title" style={{color: FieldColors[categoryName]}}>
             <i className="fas fa-coffee"></i>
             &ensp;C A F F E I N E
           </div>
@@ -92,7 +92,7 @@ class CaffeinesIndex extends React.Component {
     if (this.props.allCaffeines !== undefined) {
       return (
         <div id="caffeine-index">
-          <div>{this.indexPage()}</div>
+          <div>{this.indexPage("Caffeine")}</div>
           {this.props.allCaffeines.map(metric => (
             <SelectHolder
               key={metric._id}

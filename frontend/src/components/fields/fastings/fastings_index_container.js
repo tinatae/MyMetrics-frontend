@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { fetchAllFastings, fetchUserFastings} from "../../../actions/fasting_actions";
 import SelectHolder from '../shared/select_holder';
 import { withRouter } from "react-router-dom";
-import FastingsContainer from "./fastings_container";
+import FastingsContainer from "./fastings_add_container";
 import FastingsEditContainer from './fastings_edit_container';
 import { FieldColors } from "../../fields/shared/style_refs";
 import "../../stylesheets/field-index.css";
@@ -42,11 +42,11 @@ class FastingsIndex extends React.Component {
     window.location.reload();
   }
 
-  indexPage() {
+  indexPage(categoryName) {
     if (this.props.location.pathname === "/fasting") {
       return (
         <div id="top-container">
-          <div id="title">
+          <div id="title" style={{color: FieldColors[categoryName]}}>
             <i className="fas fa-hourglass-half"></i>
             &ensp;F A S T I N G
           </div>
@@ -92,7 +92,7 @@ class FastingsIndex extends React.Component {
     if (this.props.allFastings !== undefined) {
       return (
         <div id="fasting-index">
-          <div>{this.indexPage()}</div>
+          <div>{this.indexPage("Fasting")}</div>
           {this.props.allFastings.map(metric => (
             <SelectHolder
               key={metric._id}

@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { fetchAllExercises, fetchUserExercises } from "../../../actions/exercise_actions";
 import SelectHolder from '../shared/select_holder';
 import { withRouter } from "react-router-dom";
-import ExercisesContainer from "./exercises_container";
+import ExercisesContainer from "./exercises_add_container";
 import ExercisesEditContainer from './exercises_edit_container';
 import { FieldColors } from "../../fields/shared/style_refs";
 import "../../stylesheets/field-index.css";
@@ -42,11 +42,11 @@ class ExercisesIndex extends React.Component {
     window.location.reload();
   }
 
-  indexPage() {
+  indexPage(categoryName) {
     if (this.props.location.pathname === "/exercise") {
       return (
         <div id="top-container">
-          <div id="title">
+          <div id="title" style={{color: FieldColors[categoryName]}}>
             <i className="fas fa-heartbeat"></i>
             &ensp;E X E R C I S E
           </div>
@@ -94,7 +94,7 @@ class ExercisesIndex extends React.Component {
     if (this.props.allExercises !== undefined) {
       return (
         <div id="exercise-index">
-          <div>{this.indexPage()}</div>
+          <div>{this.indexPage("Exercise")}</div>
           {this.props.allExercises.map(metric => (
             <SelectHolder
               key={metric._id}

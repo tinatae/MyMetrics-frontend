@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { fetchAllMindfuls, fetchUserMindfuls } from "../../../actions/mindful_actions";
 import InputHolder from '../shared/input_holder';
 import { withRouter } from "react-router-dom";
-import MindfulsContainer from "./mindfuls_container";
+import MindfulsContainer from "./mindfuls_add_container";
 import MindfulsEditContainer from './mindfuls_edit_container';
 import { FieldColors } from "../../fields/shared/style_refs";
 import "../../stylesheets/field-index.css";
@@ -42,11 +42,11 @@ class MindfulsIndex extends React.Component {
     window.location.reload();
   }
   
-  indexPage() {
+  indexPage(categoryName) {
     if (this.props.location.pathname === "/mindfulness") {
       return (
         <div id="top-container">
-          <div id="title">
+          <div id="title" style={{color: FieldColors[categoryName]}}>
             <i className="fas fa-stroopwafel"></i>
             &ensp;M I N D F U L N E S S
           </div>
@@ -92,7 +92,7 @@ class MindfulsIndex extends React.Component {
     if (this.props.allMindfuls !== undefined) {
       return (
         <div id="mindful-index">
-          <div>{this.indexPage()}</div>
+          <div>{this.indexPage("Mindful")}</div>
           {this.props.allMindfuls.map(metric => (
             <InputHolder
               key={metric._id}

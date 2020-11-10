@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter } from "react-router-dom";
-import { AllColoredIcons } from "../../fields/shared/style_refs";
+import { AllColoredIcons} from "../../fields/shared/style_refs";
 
 class VegetablesEditForm extends React.Component {
     constructor(props) {

@@ -108,12 +108,19 @@ class MentalsEditForm extends React.Component {
 
                     <div id="mental-qs">
                         <h3>Notes on the Day</h3>
-                        <input
+                        <textarea
                             id="notes"
                             type="Notes"
                             value={this.state.notes}
                             onChange={this.update("notes")}
-                        />
+                        >
+                        </textarea>
+                        {/* <input
+                            id="notes"
+                            type="Notes"
+                            value={this.state.notes}
+                            onChange={this.update("notes")}
+                        /> */}
                     </div>                   
 
                     <div><input id="edit-button" type="submit" value="Update Metric" /></div>

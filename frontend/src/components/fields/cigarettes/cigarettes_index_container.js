@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { fetchAllCigarettes, fetchUserCigarettes } from "../../../actions/cigarette_actions";
 import SelectHolder from '../shared/select_holder';
 import { withRouter } from "react-router-dom";
-import CigarettesContainer from "./cigarettes_container";
+import CigarettesContainer from "./cigarettes_add_container";
 import CigarettesEditContainer from './cigarettes_edit_container';
 import { FieldColors } from "../../fields/shared/style_refs";
 import "../../stylesheets/field-index.css";
@@ -42,11 +42,11 @@ class CigarettesIndex extends React.Component {
     window.location.reload();
   }
 
-  indexPage() {
+  indexPage(categoryName) {
     if (this.props.location.pathname === "/cigs") {
       return (
         <div id="top-container">
-          <div id="title">
+          <div id="title" style={{color: FieldColors[categoryName]}}>
             <i className="fas fa-smoking"></i>
             &ensp;C I G A R E T T E S
           </div>
@@ -92,7 +92,7 @@ class CigarettesIndex extends React.Component {
     if (this.props.allCigarettes !== undefined) {
       return (
         <div id="cigarette-index">
-          <div>{this.indexPage()}</div>
+          <div>{this.indexPage("Cigarette")}</div>
           {this.props.allCigarettes.map(metric => (
             <SelectHolder
               key={metric._id}

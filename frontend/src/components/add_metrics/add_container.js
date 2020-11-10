@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import Add from "./add";
+import Add from "./add_page";
 import { fetchSingleUser } from "../../actions/user_actions";
 
 const mSTP = state => {

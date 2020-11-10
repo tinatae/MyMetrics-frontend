@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { fetchAllOops, fetchUserOops } from "../../../actions/oop_actions";
 import InputHolder from '../shared/input_holder';
 import { withRouter } from "react-router-dom";
-import OopsContainer from "./oops_container";
+import OopsContainer from "./oops_add_container";
 import OopsEditContainer from './oops_edit_container';
 import { FieldColors } from "../../fields/shared/style_refs";
 import "../../stylesheets/field-index.css";
@@ -42,11 +42,11 @@ class OopsIndex extends React.Component {
     window.location.reload();
   }
 
-  indexPage() {
+  indexPage(categoryName) {
     if (this.props.location.pathname === "/oops") {
       return (
         <div id="top-container">
-          <div id="title">
+          <div id="title" style={{color: FieldColors[categoryName]}}>
             <i className="fas fa-ghost"></i>
             &ensp;O O P S
           </div>
@@ -92,7 +92,7 @@ class OopsIndex extends React.Component {
     if (this.props.allOops !== undefined) {
       return (
         <div id="oop-index">
-          <div>{this.indexPage()}</div>
+          <div>{this.indexPage("Oop")}</div>
           {this.props.allOops.map(metric => (
             <InputHolder
               key={metric._id}

@@ -18,116 +18,25 @@
     margin-right: 3px;
 }
 
-.alcohol {
-    background-color: rgb(144, 245, 42);
+.field-add {
     border-radius: 10px;
     padding: 10px;
     margin: 20px;
     border: 1px solid white;
 }
 
-.alcohol span {
+.field-add span {
     color: white;
     font-size: 12px;
     font-weight: 600;
-}
-
-.badfat {
-    background-color:rgb(238, 192, 111);
-    border-radius: 10px;
-    padding: 10px;
-    margin: 20px;
-    border: 1px solid white;
 }
 
 .badfat span {
     color: lightyellow;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.caffeine {
-    background-color: rgb(62, 39, 14);
-    border-radius: 10px;
-    padding: 10px;
-    margin: 20px;
-    border: 1px solid white;
-}
-
-.caffeine span {
-    color: white;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.carb {
-    background-color: rgb(254, 207, 20);
-    border-radius: 10px;
-    padding: 10px;
-    margin: 20px;
-    border: 1px solid white;
-}
-
-.carb span {
-    color:white;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.cigarette {
-    background-color: rgb(174, 204, 243);
-    border-radius: 10px;
-    padding: 10px;
-    margin: 20px;
-    border: 1px solid white;
-}
-
-.cigarette span {
-    color: white;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.creative {
-    background-color: rgb(175, 33, 215);
-    border-radius: 10px;
-    padding: 10px;
-    margin: 20px;
-    border: 1px solid white;
 }
 
 .creative span {
     color: lightyellow;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.drug {
-    background-color: rgb(247, 64, 247);
-    border-radius: 10px;
-    padding: 10px;
-    margin: 20px;
-    border: 1px solid white;
-}
-
-.drug span {
-    color: white;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.exercise {
-    background-color: rgb(33, 193, 193);
-    border-radius: 10px;
-    padding: 10px;
-    margin: 20px;
-    border: 1px solid white;
-}
-
-.exercise span {
-    color: white;
-    font-size: 12px;
-    font-weight: 600;
 }
 
 .exercise #add-inputs input {
@@ -136,144 +45,12 @@
     border-radius: 3px;
 }
 
-.fasting {
-    background-color: darkslateblue;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 20px;
-    border: 1px solid white;
-}
-
-.fasting span {
-    color: white;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.gooddeed {
-    background-color: rgb(0, 179, 255);
-    border-radius: 10px;
-    padding: 10px;
-    margin: 20px;
-    border: 1px solid white;
-}
-
-.gooddeed span {
-    color: white;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.goodfat {
-    background-color: rgb(236, 71, 25);
-    border-radius: 10px;
-    padding: 10px;
-    margin: 20px;
-    border: 1px solid white;
-}
-
 .goodfat span {
     color: lightyellow;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.hydration {
-    background-color: rgb(107, 248, 248);
-    border-radius: 10px;
-    padding: 10px;
-    margin: 20px;
-    border: 1px solid white;
 }
 
 .hydration span {
     color: darkslateblue;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.learning {
-    background-color: rgb(35, 221, 35);
-    border-radius: 10px;
-    padding: 10px;
-    margin: 20px;
-    border: 1px solid white;
-}
-
-.learning span {
-    color: white;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.localbiz {
-    background-color: rgb(245, 101, 12);
-    border-radius: 10px;
-    padding: 10px;
-    margin: 20px;
-    border: 1px solid white;
-}
-
-.localbiz span {
-    color: white;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.medication {
-    background-color: red;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 20px;
-    border: 1px solid white;
-}
-
-.medication span {
-    color: white;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.mindful {
-    background-color: rgb(109, 109, 210);
-    border-radius: 10px;
-    padding: 10px;
-    margin: 20px;
-    border: 1px solid white;
-}
-
-.mindful span {
-    color: white;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.oop {
-    background-color: rgb(254, 153, 2);
-    border-radius: 10px;
-    padding: 10px;
-    margin: 20px;
-    border: 1px solid white;
-}
-
-.oop span {
-    color: white;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.protein {
-    background-color: rgb(250, 121, 121);
-    border-radius: 10px;
-    padding: 10px;
-    margin: 20px;
-    border: 1px solid white;
-}
-
-.protein span {
-    color:white;
-    font-size: 12px;
-    font-weight: 600;
 }
 
 .protein #add-inputs input {
@@ -282,51 +59,11 @@
     border-radius: 3px;
 }
 
-.sleep {
-    background-color: rgb(31, 31, 119);
-    border-radius: 10px;
-    padding: 10px;
-    margin: 20px;
-    border: 1px solid white;
-}
-
 .sleep span {
     color: rgb(250, 249, 249);
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.sugar {
-    background-color: rgb(252, 178, 191);
-    border-radius: 10px;
-    padding: 10px;
-    margin: 20px;
-    border: 1px solid white;
-}
-
-.sugar span {
-    color: white;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.vegetable {
-    background-color: rgb(69, 138, 9);
-    border-radius: 10px;
-    padding: 10px;
-    margin: 20px;
-    border: 1px solid white;
-}
-
-.vegetable span {
-    color: white;
-    font-size: 12px;
-    font-weight: 600;
 }
 
 #field-logo {
     display: inline-block;
     margin-left: 20px;
 }
-
-

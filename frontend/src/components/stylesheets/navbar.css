@@ -6,10 +6,6 @@
     padding: 10px;
 }
 
-/* #personal-links {
-    margin-right: 50px;
-} */
-
 #personal-links i {
     padding: 10px;   
 }
@@ -28,6 +24,17 @@
     /* font-family: Arial, Helvetica, sans-serif; */
 }
 
+
+.nav div a {
+    color: darkblue;
+    text-decoration: none;
+}
+
+
+.nav div a:hover {
+    color: blue;
+}
+
 #top-nav div:nth-child(1) {
     display: flex;
     align-items: center;
@@ -38,17 +45,9 @@
 }
 
 #top-nav h1:hover:after {
-    content: "All Metrics";
-    color: white;
-}
-
-#top-nav h1:hover {
-    text-shadow: 
-    0 0 2px rgb(144, 245, 42), 
-    1px 1px 2px rgb(144, 245, 42), 
-    1px 1px 2px rgb(144, 245, 42), 
-    -1px -1px 2px rgb(144, 245, 42),
-    -1px -1px 2px rgb(144, 245, 42);
+    content: "Metrics Home";
+    color: blue;
+    font-size: 32px;
 }
 
 .nav + div {
@@ -56,17 +55,17 @@
     color: white;
 }
 
-.nav a {
+/* .nav a {
     padding: 5px 10px;
     border-radius: 7px;
-}
+} */
 
 .nav a:hover {
-   border: solid 1px darkblue;
+   color: blue;
 }
 
 .drop-label {
-    color: black;
+    color: darkblue;
     cursor: pointer;
 }
 
@@ -82,7 +81,7 @@
 .dropdown-content {
     display: none;
     position: absolute;
-    width: 230px;
+    width: 300px;
     border-radius: 4px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -91,31 +90,24 @@
     background-color: white;
 }
 
-.dropdown-content Link {
-    padding: 12px 16px;
+.dropdown-content a {
+    padding: 0 10px;
     display: block;
+    text-decoration: none;
+    /* font-family: Arial, Helvetica, sans-serif; */
 }
 
 .dropdown-content div {
-    /* text-align: center; */
     margin-top: 1px;
     margin-bottom: 1px;
 }
 
 .dropdown-content a:hover {
-    /* background-color: rgb(173, 237, 255); */
-    display: block;
-    border: 1px solid blue;
+    text-decoration: underline;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
-}
-
-.dropdown:hover .drop-label {
-    border: 1px solid  blue;
-    border-radius: 7px;
-    padding: 5px 10px;
 }
 
 .greeting {

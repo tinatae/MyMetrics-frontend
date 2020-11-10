@@ -11,31 +11,27 @@ const UserPageMentalPieGraph = ({
     //anxiety: Number
     //notes: String 
 
-    const metricHash = {};
-    let sumHashValues = 0;
+    var sumMetricCount = 0;
 
-    for (let i = metrics.length-1; i >= 0; i--) {
-        if (!metricHash[metrics[i].anxiety]) metricHash[metrics[i].anxiety] = 0;
-        metricHash[metrics[i].anxiety] += 1;
-        sumHashValues += 1;
-    }
-
-    const dateHash = {};
-
-    for (let i = metrics.length-1; i >= 0; i--) {
-        if (!dateHash[metrics[i].anxiety]) dateHash[metrics[i].anxiety] = [];
-        dateHash[metrics[i].anxiety].push(metrics[i].date);
-    };
+    const countAndDateHash = metrics.reduce(function(obj, metric) {
+        if (!obj[metric.anxiety]) {
+            obj[metric.anxiety] = {count: 0, dates: []}
+        }
+        obj[metric.anxiety].count++;
+        obj[metric.anxiety].dates.push(metric.date)
+        sumMetricCount++;
+        return obj;
+    }, {})
 
     let anxietyDataPts = [];
 
-    for (let i = 0; i <= Object.keys(metricHash).length - 1; i++) {
+    for (let i = 0; i < sumMetricCount; i++) {
         anxietyDataPts.push({ 
-            name: Object.keys(metricHash)[i], 
-            y: Math.round(Object.values(metricHash)[i] / sumHashValues * 100), 
-            nameMetricCount: `<span style='color: blue; font-weight: bold;'>${Object.values(metricHash)[i]}</span>`,
-            allMetricCount: `<span style='color: blue; font-weight: bold;'>${sumHashValues} total reported metric(s)</span>`,
-            dates: Object.values(dateHash)[i].map(date => " ".concat(new Date(date).toLocaleDateString('en-US', { month: 'numeric', day: 'numeric' }))) 
+            name: Object.keys(countAndDateHash)[i], 
+            y: Math.round(Object.values(countAndDateHash)[i].count / sumMetricCount * 100), 
+            nameMetricCount: `<span style='color: blue; font-weight: bold;'>${Object.values(countAndDateHash)[i].count}</span>`,
+            allMetricCount: `<span style='color: blue; font-weight: bold;'>${sumMetricCount} total reported metric(s)</span>`,
+            dates: Object.values(countAndDateHash)[i].dates.map(date => " ".concat(new Date(date).toLocaleDateString('en-US', { month: 'numeric', day: 'numeric' }))) 
         })
     };
 

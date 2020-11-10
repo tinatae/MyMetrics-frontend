@@ -270,5 +270,95 @@ export const InputIcons = {
     "Oop": <i className="fas fa-ghost"></i>,
 };
 
+export const SelectUnits = {
+  "Alcohol": ["Drinks", "Shots", "Bottles", "Servings"],
+  "BadFat": ["Servings", "Items"],
+  "Caffeine": ["Cups", "fl. oz."],
+  "Carb": ["Servings"],
+  "Cigarette": ["Cigarettes", "Packs"], // special
+  "Exercise": ["Miles", "Minutes", "Meters", "Hours", "Times"], // special
+  "Fasting": ["Hours"],
+  "GoodFat": ["Servings", "Items"],
+  "Hydration": ["Cups", "Gallons"], // special
+  "Protein": ["Servings", "oz.", "Grams"],
+  "Sleep": ["Hours"],
+  "Sugar": ["Servings", "Sweets"],
+  "Vegetable": ["Servings", "Vegetables"]
+};
+
+// PURE RAW UNITS VERSION
+// export const SelectUnits = {
+//   "Alcohol": ["drink", "shot", "bottle", "serving"],
+//   "BadFat": ["serving", "item"],
+//   "Caffeine": ["fl. oz.", "cup"],
+//   "Carb": ["serving"],
+//   "Cigarette": ["cigarette", "pack"],
+//   "Exercise": ["minute", "hour", "meter", "mile", "time"],
+//   "Fasting": ["hour"],
+//   "GoodFat": ["serving", "item"],
+//   "Hydration": ["cup", "gallon"],
+//   "Protein": ["oz.", "gram", "serving"],
+//   "Sleep": ["hour"],
+//   "Sugar": ["sweet", "serving"],
+//   "Vegetable": ["serving", "vegetable"]
+// };
+
+    // alcohol 
+    // <option value="drink">drink(s)</option>
+    // <option value="shot">shot(s)</option>
+    // <option value="bottle">bottle(s)</option>
+    // <option value="serving">serving(s)</option>
+
+    // badfat 
+    // <option value="serving">serving(s)</option>
+    // <option value="item">item(s)</option>
+
+    // caffeine 
+    // <option value="fl. oz.">fl. oz.</option>
+    // <option value="cup">cup(s)</option>
+
+    // carb
+    // <option value="serving">serving(s)</option>
+
+    // cigarette
+    // <option value="cigarette">cigarette(s)</option>
+    // <option value="pack">pack(s)</option>
+
+    // exercise
+    // <option value="minute">min(s)</option>        
+    // <option value="hour">hour(s)</option>
+    // <option value="meter">meter(s)</option>
+    // <option value="mile">mile(s)</option>
+    // <option value="time">time(s)</option>
+
+    // fasting
+    // <option value="hour">hour(s)</option>
+
+    // goodfat
+    // <option value="serving">serving(s)</option>
+    // <option value="item">item(s)</option>
+
+    // hydration
+    // <option value="cup">cup(s)</option>
+    // <option value="gallon">gallon(s)</option>
+
+    // protein
+    // <option value="oz.">oz.</option>
+    // <option value="gram">gram(s)</option>
+    // <option value="serving">serving(s)</option>
+
+    // sleep
+    // <option value="hour">hour(s)</option>;
+
+    // sugar
+    // <option value="sweet">sweet(s)</option>
+    // <option value="serving">serving(s)</option>
+
+    // vegetable
+    // <option value="serving">serving(s)</option>
+    // <option value="vegetable">vegetable(s)</option>
+
+
+
 
 

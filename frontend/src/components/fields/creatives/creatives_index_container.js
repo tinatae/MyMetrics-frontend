@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { fetchAllCreatives, fetchUserCreatives } from "../../../actions/creative_actions";
 import InputHolder from '../shared/input_holder';
 import { withRouter } from "react-router-dom";
-import CreativesContainer from "./creatives_container";
+import CreativesContainer from "./creatives_add_container";
 import CreativesEditContainer from './creatives_edit_container';
 import { FieldColors } from "../../fields/shared/style_refs";
 import "../../stylesheets/field-index.css";
@@ -42,11 +42,11 @@ class CreativesIndex extends React.Component {
     window.location.reload();
   }
 
-  indexPage() {
+  indexPage(categoryName) {
     if (this.props.location.pathname === "/creativity") {
       return (
         <div id="top-container">
-          <div id="title">
+          <div id="title" style={{color: FieldColors[categoryName]}}>
             <i className="fas fa-palette"></i>
             &ensp;C R E A T I V I T Y
           </div>
@@ -92,7 +92,7 @@ class CreativesIndex extends React.Component {
     if (this.props.allCreatives !== undefined) {
       return (
         <div id="creative-index">
-          <div>{this.indexPage()}</div>
+          <div>{this.indexPage("Creative")}</div>
           {this.props.allCreatives.map(metric => (
             <InputHolder
               key={metric._id}
