@@ -3,10 +3,10 @@ Personal Lifestyle Analytics. Track and/or share what you like.
 
 #### Built On:
 * MongoDB
-* Express
+* Express.js
 * React
 * Node.js
-* Chart.js
+* CanvasJS
 
 #### Overview:
 Choose from a broad variety of metric categories--ranging from dietary & auxiliary intakes, daily activities & community-focused interests. The focus is on the individual user as they choose from the above 20 categories, enter daily inputs & reflect on their daily practices.
@@ -22,7 +22,7 @@ Categories deemed to be "Challenge" categories are tracked and visualized (graph
 
 #### Functionalities: 
 * Ability to add/edit/delete/make private individual metrics & "Challenge" categories
-* Chart.js graphs visualizing user metrics with tooltip 'Notes from the Day' and/or Running Averages where applicable
+* CanvasJS graphs visualizing user metrics with tooltip 'Notes from the Day' and/or Running Averages where applicable
 
 #### Sample Code:
   ##### 'Add Metric' Page
